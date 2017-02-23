@@ -1,3 +1,5 @@
+WARNING: This repository is a refectoring work in progress and contains an amount of legacy code   
+
 Zend Framework 2 Extension
 ==========================
 
