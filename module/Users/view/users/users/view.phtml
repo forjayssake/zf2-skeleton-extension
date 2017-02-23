@@ -1,0 +1,52 @@
+<?php 
+	$b = new \Application\Behavior\AuditableBehavior();
+?>
+<div class="row user-view ">
+	
+	<h1>
+		<i class="fa fa-user"></i> <?php echo $this->user->getFullName(); ?>
+	</h1>
+	
+	<div class="col-md-6">
+		
+		<h3><?php echo $this->translate('USER_DETAILS'); ?></h3>
+		
+		<dl class="dl-horizontal">
+			<dt><?php echo $this->translate('NAME'); ?></dt>
+				<dd><?php echo $this->escapeHtml($this->user->getFullName()); ?></dd>
+			<dt><?php echo $this->translate('EMAIL'); ?></dt>
+				<dd>
+					<a href="mailto: <?php echo $this->escapeHtml($this->user->getEmail()); ?>">
+						<?php echo $this->escapeHtml($this->user->getEmail()); ?>
+					</a>
+				</dd>
+			<dt><?php echo $this->translate('USERNAME'); ?></dt>
+				<dd><?php echo $this->escapeHtml($this->user->getUsername()); ?></dd>
+		</dl>
+		
+		<?php if ($this->user->getAuthenticationType() === \User::AUTHENTICATE_DB) : ?>
+			<a class="btn btn-primary" title="<?php echo $this->translate('CHANGE_PASSWORD'); ?>" href="<?php echo $this->url('users/view/actions', ['id' => $this->user->getPrimaryKey(), 'action' => 'password']); ?>">
+				<i class="fa fa-lock"></i> <?php echo $this->translate('CHANGE_PASSWORD'); ?>
+			</a>
+		<?php endif; ?>
+		
+	</div>
+	
+	<div class="col-md-6">
+		
+		<h3><?php echo $this->translate('SYSTEM_DETAILS'); ?></h3>
+		
+		<dl class="dl-horizontal">
+			<dt><?php echo $this->translate('AUTHENTICATION_TYPE'); ?></dt>
+				<dd><?php echo $this->translate($this->user->getAuthenticationTypeString()); ?></dd>
+			<dt><?php echo $this->translate('ROLE'); ?></dt>
+				<dd><?php echo $this->user->getRole()->getName();?></dd>
+			<dt><?php echo $this->translate('SYSTEM_ADMINISTRATOR'); ?></dt>
+				<dd><?php echo $this->RenderTickCrossNull($this->user->getSystemAdministrator()); ?></dd>
+			<dt><?php echo $this->translate('DATE_CREATED'); ?></dt>
+				<dd><?php echo $this->dateFormat($this->user->getCreatedAt(), IntlDateFormatter::MEDIUM); ?></dd>
+		</dl>
+		
+	</div>
+	
+</div>

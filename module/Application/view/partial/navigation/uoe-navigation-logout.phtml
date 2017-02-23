@@ -1,0 +1,25 @@
+<?php 
+	$page = $this->page; 
+	$user = $this->user;
+?>
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-power-off"></i> <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li class="list-item"><p class="navbar-text list-item-content "> <?php echo $user->getFullName(); ?></p></li>
+		<li class="list-item"><p class="navbar-text list-item-content "> <?php echo $user->getRole()->getName(); ?></p></li>
+		
+		<?php if (!is_null($page->get('show_sys_admin')) && $page->get('show_sys_admin') == true && $user->getsystemAdministrator()) : ?>
+			<li class="list-item">
+				<p class="navbar-text list-item-content list-item-badged"> 
+					<i class="fa fa-warning alert-warning"></i> <?php echo $this->translate('SYS_ADMIN'); ?>
+				</p>
+			</li>
+		<?php endif; ?>
+		
+		<li class="list-item">
+			<a href="<?php echo $this->url($page->get('route')) ?>">
+				<?php echo !is_null($page->get('icon')) ? '<i class="fa ' . $page->get('icon') . '"></i> ' : ''; ?> <?php echo $this->translate($page->get('label')); ?>
+			</a>
+		</li>
+	</ul>
+</li>

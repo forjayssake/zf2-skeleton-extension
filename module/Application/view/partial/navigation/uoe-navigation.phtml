@@ -1,0 +1,75 @@
+<?php 
+	$serviceLocator = $this->getHelperPluginManager()->getServiceLocator();
+	$routeMatch 	= $serviceLocator->get('Application')->getMvcEvent()->getRouteMatch();
+	$routeName 		= is_null($routeMatch) ? null : $routeMatch->getMatchedRouteName();
+	$config			= $serviceLocator->get('config');
+	$user			= User::getLoggedIn();
+?>
+
+<div class="collapse navbar-collapse">
+	<ul class="nav navbar-nav">
+		<?php foreach($this->container as $page) : ?>
+			
+			<?php
+				$sysAdminOnly = $page->get('sys-admin-only');
+				if($sysAdminOnly && !$user->getsystemAdministrator())
+					continue;
+
+				$assertRole = new \Application\Assertion\AssertUserInRoleHeirarchy($user, $page->get('base-role'));
+				if (!$assertRole->assert())
+					continue;
+			?>
+			
+			<?php if (is_null($page->get('align')) || $page->get('align') == 'left') : ?>
+				<li class="<?php echo strpos($routeName, $page->get('route')) !== false ? 'active' : ''; ?>">
+					<a href="<?php echo $this->url($page->get('route')) ?>" class=" ">
+						<?php echo !is_null($page->get('icon')) ? '<i class="fa ' . $page->get('icon') . '"></i> ' : ''; ?> <?php echo $this->translate($page->get('label')); ?>
+					</a>
+				</li>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		
+		<?php 
+			if (isset($config['navigation']['setup']) && count($config['navigation']['setup']) > 0 /**other permissions here */) 
+			{
+				$this->navigation()->menu()->setPartial(['partial/navigation/uoe-navigation-setup', 'setup']);
+				echo $this->navigation('setup_navigation')->menu();
+			}
+		?>
+		
+		<?php if (isset($config['global_search']) && $config['global_search']['show_search'] === true) : ?>
+			<form id="GlobalSearchForm" class="navbar-form navbar-left" role="search" method="post" action="<?php echo $this->url('global-search', ['controller' => 'IndexController']); ?>">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="<?php echo $config['global_search']['search_input_prompt']; ?>" id="global-search-text">
+				</div>
+			<button type="submit" class="btn btn-default" id="global-search" disabled="true"><i class="fa fa-search"></i></button>
+			</form>
+		<?php endif; ?>
+		
+		<?php foreach($this->container as $page) : ?>
+		
+			<?php
+				$assertRole = new \Application\Assertion\AssertUserInRoleHeirarchy($user, $page->get('base-role'));
+				if (!$assertRole->assert())
+					continue;
+			?>
+			
+			<?php if (!is_null($page->get('align')) && $page->get('align') == 'right') : ?>
+				
+				<?php if ($page->get('route') == 'logout' && !is_null($page->get('show_details')) && $page->get('show_details') == true) :?>
+					<?php echo $this->partial('partial/navigation/uoe-navigation-logout', ['page' => $page, 'user' => $user]); ?>
+				<?php else : ?>
+					<li>
+						<a href="<?php echo $this->url($page->get('route')) ?>">
+							<?php echo !is_null($page->get('icon')) ? '<i class="fa ' . $page->get('icon') . '"></i> ' : ''; ?> <?php echo $this->translate($page->get('label')); ?>
+						</a>
+					</li>
+				<?php endif; ?>
+				
+			<?php endif;?>
+		<?php endforeach; ?>
+	</ul>
+</div>
+

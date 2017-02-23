@@ -1,0 +1,9 @@
+<div class="row ">
+	<h1><i class="fa fa-wrench"></i> <?php echo $this->translate('SETTINGS'); ?></h1>
+	
+	<div class="alert alert-warning">
+		<i class="fa fa-warning"></i> <?php echo $this->translate('SETTINGS_NODIFICATION_WARNING'); ?>
+	</div>
+	
+	<?php echo $this->partial('partial/table', ['table' => $this->table]); ?>
+</div>

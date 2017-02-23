@@ -1,0 +1,40 @@
+<?php if (!is_null($this->table->fetchCheckboxForm())) : ?>
+
+	<?php if ($this->table->fetchCheckboxFormLocation() !== \Application\Service\PropelTableService::CHECKBOX_FORM_MODAL) :  ?>
+
+		<div class="propel-table-checkbox-form ">
+			<?php if (is_null($this->table->fetchCheckboxPartial())) : ?>
+				<?php echo $this->form($this->table->fetchCheckboxForm()); ?>
+			<?php else: ?>
+				<?php echo $this->partial($this->table->fetchCheckboxPartial(), ['form' => $this->table->fetchCheckboxForm()]); ?>
+			<?php endif; ?>
+		</div>
+		
+	<?php else: ?>
+		
+		<?php
+			
+			$options = [];
+			
+			$options['buttons'] = [
+				'<button class="btn btn-default generic-modal-cancel">'.$this->translate('MODAL_CANCEL').'</button>'
+			];
+			
+			echo $this->GenericModal(
+					'BulkOptions' . md5(json_encode($this->table->getConfig())), 
+					'BULK_OPTIONS', 
+					$options, 
+					!is_null($this->table->fetchCheckboxPartial()) ? $this->table->fetchCheckboxPartial() : 'partial/table-form-partial' , 
+					['form' => $this->table->fetchCheckboxForm()]
+					);
+		?>
+		
+		<script type="text/javascript">
+			$(function(){
+				tableModal('BulkOptions<?php echo md5(json_encode($this->table->getConfig())); ?>');
+			});
+		</script>
+
+	<?php endif; ?>
+	
+<?php endif; ?>

@@ -1,0 +1,116 @@
+<?php 
+	$this->headScript()->appendFile('/js/propel-table.js');
+	$config = $this->table->getConfig();
+?>
+<div class="propel-table-wrapper">
+	<?php echo $this->partial($this->table->getPaginationPartial(), ['table' => $this->table]); ?>
+	
+	<?php
+		$pagination = $this->paginationControl(
+				$this->table->getPaginator()->setPageRange($this->table->getPaginationRange()),
+				'Sliding',
+				'partial/table-pagination',
+				['table' => $this->table]);
+		echo $pagination;
+	?>
+	
+	<?php if ($this->table->requiresFilterForm()) : ?>
+		<?php echo $this->form(null,\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE)->openTag($this->table->getFilterForm()); ?>
+	<?php endif; ?>
+	
+	<?php if ($this->table->fetchCheckboxFormLocation() === \Application\Service\PropelTableService::CHECKBOX_FORM_ABOVE) :  ?>
+		<?php echo $this->partial('partial/table-checkbox-form', ['table' => $this->table]); ?>
+	<?php endif; ?>
+	
+	<?php if ($this->table->isResponsive()) : ?>
+		<div class="table-responsive">
+	<?php endif; ?>
+		<table class="table table-condensed table-striped table-hover table-bordered table-propel <?php echo isset($config['tableclass']) ? $config['tableclass'] : ''; ?>">
+			
+			<?php echo $this->partial($this->table->getHeaderPartial(), ['table' => $this->table]); ?>
+			
+			<tbody class="propel-table-body">
+				<?php foreach($this->table->getRows() as $row) : ?>
+					<tr>
+						<?php if ($this->table->hasCheckboxes()) : ?>
+							<td><input type="checkbox" value="<?php echo $row->getPrimaryKey();?>" name="selectedIds[]" class="table-checkbox"></td>
+						<?php endif; ?>
+						
+						<?php foreach($this->table->getColumns() as $columnName => $columnConfig) : ?>
+							<td>
+								<?php 
+									$method = 'get' . $columnName;
+									$value = $row->$method();
+									
+									if ($value instanceOf \DateTime && !isset($columnConfig['helper']))
+									{
+										$value = $value->format('j M Y');
+									} elseif (isset($columnConfig['helper']) && is_object($columnConfig['helper']) && $columnConfig['helper'] instanceOf \Closure) {
+										$value = $columnConfig['helper']($value, $row);
+									} elseif (isset($columnConfig['helper']) && isset($columnConfig['helper']['name'])) {
+										
+										$params = [$value];
+										
+										if (isset($columnConfig['helper']['params']))
+										{
+											$helperParams = is_array($columnConfig['helper']['params']) ? $columnConfig['helper']['params'] : [$columnConfig['helper']['params']];
+											$params = array_merge($params,$helperParams);
+										}
+										
+										if (isset($columnConfig['helper']['parseRow']) && $columnConfig['helper']['parseRow'] === true)
+										{
+											$params[] = $row;
+										}
+										
+										$value = $this->__call($columnConfig['helper']['name'] , $params);
+									} else {
+										$value = $this->escapeHtml($value);
+									}
+									
+									if (isset($columnConfig['isLink']) && $columnConfig['isLink'] == true)
+									{
+										echo '<a title="' . $this->translate('VIEW') . '" href="' . $this->url($this->table->getLinkUrlString(), $this->table->getLinkUrlParameters($row)) . '">' . $value . '</a>';
+									} else {
+										echo $value;
+									}
+								?>
+							</td>
+						<?php endforeach; ?>
+						
+						<?php if ($this->table->hasLinkButtons()) : ?>
+							<td class="propel-table-actions">
+								<div class="btn-group">
+									<?php foreach($this->table->getLinkButtonParameters($row) as $type => $urlConfig) : ?>
+										<a 
+											class="btn <?php echo $urlConfig['linkClass']; ?> btn-xs" 
+											title="<?php echo $this->translate($urlConfig['linkText']); ?>" 
+											href="<?php echo $this->url($urlConfig['urlString'], $urlConfig['urlParameters']); ?>"
+										>
+											<i class="<?php echo $urlConfig['linkIcon']; ?>"></i>
+										</a>
+									<?php endforeach; ?>
+								</div>
+							</td>
+						<?php endif; ?>
+						
+					</tr>
+				<?php endforeach; ?>
+		</tbody>
+	</table>
+	
+	<?php echo $pagination; ?>
+	
+	<?php if ($this->table->isResponsive()) : ?>
+		</div>
+	<?php endif; ?>
+	
+	<?php if ($this->table->fetchCheckboxFormLocation() === \Application\Service\PropelTableService::CHECKBOX_FORM_BELOW ||
+			$this->table->fetchCheckboxFormLocation() === \Application\Service\PropelTableService::CHECKBOX_FORM_MODAL) :  ?>
+		<?php echo $this->partial('partial/table-checkbox-form', ['table' => $this->table]); ?>
+	<?php endif; ?>
+	
+	<?php if ($this->table->requiresFilterForm()) : ?>
+		<?php echo $this->form()->closeTag($this->table->getFilterForm());?>
+	<?php endif; ?>
+	
+</div>

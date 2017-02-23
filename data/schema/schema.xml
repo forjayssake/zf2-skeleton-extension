@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore">
+
+    <table name="users" idMethod="native" phpName="User">
+        <column phpNamingMethod="nochange" name="id" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column phpNamingMethod="nochange" name="_role_id" type="INTEGER" required="true"/>
+        <column phpNamingMethod="nochange" name="title" type="VARCHAR" size="10" required="true"/>
+        <column phpNamingMethod="nochange" name="firstName" type="VARCHAR" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="lastName" type="VARCHAR" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="password" type="VARCHAR" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="email" type="VARCHAR" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="username" type="VARCHAR" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="authenticationType" type="TINYINT" size="1" defaultValue="0" required="true"/>
+        <column phpNamingMethod="nochange" name="systemAdministrator" type="boolean" default="0" required="true"/>
+        <column phpNamingMethod="nochange" name="userData" type="longvarchar" required="false"/>
+
+        <unique name="EmailUnique">
+            <unique-column name="email" size="100" />
+        </unique>
+
+        <unique name="UsernameUnique">
+            <unique-column name="username" />
+        </unique>
+
+        <foreign-key foreignTable="roles" phpName="Role" skipSql="true">
+            <reference local="_role_id" foreign="id"/>
+        </foreign-key>
+
+        <behavior name="timestampable" />
+        <behavior name="archivable" />
+
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+    </table>
+
+    <table name="roles" phpName="Role">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="_role_id" type="integer" required="false" description="Parent Role"/>
+        <column phpNamingMethod="nochange" name="name" type="varchar" size="100" required="true"/>
+        <column phpNamingMethod="nochange" name="isDefault" type="boolean" default="0" required="false" description="Default Role for Users (only 1 default should exist) "/>
+        <column phpNamingMethod="nochange" name="description" type="longvarchar" required="false"/>
+        <column phpNamingMethod="nochange" name="constant" type="varchar" size="100" required="false"/>
+
+        <foreign-key foreignTable="roles" phpName="parentRole" skipSql="true">
+            <reference local="_role_id" foreign="id"/>
+        </foreign-key>
+
+        <unique name="ConstantUnique">
+            <unique-column name="constant" size="100" />
+        </unique>
+
+    </table>
+
+    <table name="auditlogs" phpName="AuditLog">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="_user_id" type="integer" required="true"/>
+        <column phpNamingMethod="nochange" name="object" type="varchar" size="100" required="true"/>
+        <column phpNamingMethod="nochange" name="objectId" type="integer" required="true"/>
+        <column phpNamingMethod="nochange" name="data" type="longvarchar" required="true"/>
+
+        <foreign-key foreignTable="users" phpName="Users" skipSql="true">
+            <reference local="_user_id" foreign="id"/>
+        </foreign-key>
+
+        <behavior name="timestampable" />
+
+    </table>
+
+    <table name="settings" phpName="Setting">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="name" type="varchar" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="valueInt" type="integer" required="false"/>
+        <column phpNamingMethod="nochange" name="valueString" type="longvarchar" required="false"/>
+        <column phpNamingMethod="nochange" name="valueFloat" type="decimal" scale="10" required="false"/>
+        <column phpNamingMethod="nochange" name="valueBool" type="boolean" default="0" required="false"/>
+
+        <behavior name="timestampable" />
+
+    </table>
+
+    <table name="templates" phpName="Template">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="name" type="varchar" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="event" type="varchar" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="subject" type="varchar" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="body" type="longvarchar" required="true"/>
+
+        <behavior name="timestampable" />
+        <behavior name="archivable" />
+
+    </table>
+
+    <table name="emaillogs" phpName="EmailLog">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="status" type="TINYINT" size="1" defaultValue="0" required="true"/>
+        <column phpNamingMethod="nochange" name="subject" type="varchar" size="255" required="true"/>
+        <column phpNamingMethod="nochange" name="from" type="longvarchar" required="true"/>
+        <column phpNamingMethod="nochange" name="to" type="longvarchar" required="true"/>
+        <column phpNamingMethod="nochange" name="body" type="longvarchar" required="true"/>
+
+        <behavior name="timestampable" />
+
+    </table>
+
+    <table name="accessmanagementlogs" phpName="AccessManagementLog">
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+            <parameter name="Charset" value="utf8"/>
+            <parameter name="Collate" value="utf8_general_ci"/>
+        </vendor>
+
+        <column phpNamingMethod="nochange" name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column phpNamingMethod="nochange" name="_user_id" type="TINYINT" required="true"/>
+        <column phpNamingMethod="nochange" name="config" type="longvarchar" size="255" required="false"/>
+
+        <behavior name="timestampable" />
+
+    </table>
+
+</database>

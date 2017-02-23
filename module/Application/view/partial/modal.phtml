@@ -1,0 +1,26 @@
+<div class="modal fade <?php echo strtolower($this->id); ?> <?php echo isset($this->options['modalClass']) ? $this->options['modalClass'] : ''; ?>" id="<?php echo $this->id; ?>">
+	<div class="modal-dialog <?php echo strtolower($this->id); ?>_dialog">
+    	<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" tabindex="-1">&times;</button>
+				<h3><?php echo $this->header; ?></h3>
+			</div>
+			<div class="modal-body">
+				<?php if (!is_null($this->partial)) : ?>
+					<?php echo $this->partial($this->partial, !empty($this->partialParams) ? $this->partialParams : null); ?>
+				<?php else : ?>
+					<!-- please wait spinner -->
+					<div class="well generic-modal-waiting"><i class="fa fa-refresh fa-spin"></i></div>
+				<?php endif; ?>
+			</div>
+			<div class="modal-footer">
+				<!-- button options -->
+				<?php if (isset($this->options['buttons'])) : ?>
+					<?php foreach($this->options['buttons'] as $key => $button) : ?>
+						<?php echo $button; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+</div>

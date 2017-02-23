@@ -1,0 +1,24 @@
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cogs"></i> <?php echo $this->translate('SETUP'); ?> <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<?php foreach($this->container as $page) : ?>
+			
+			<?php
+				$user = \User::getLoggedIn();
+				$sysAdminOnly = $page->get('sys-admin-only');
+				if($sysAdminOnly && !$user->getsystemAdministrator())
+					continue;
+
+				$assertRole = new \Application\Assertion\AssertUserInRoleHeirarchy($user, $page->get('base-role'));
+				if (!$assertRole->assert())
+					continue;
+			?>
+			
+			<li>
+				<a href="<?php echo $this->url($page->get('route')) ?>">
+					<?php echo !is_null($page->get('icon')) ? '<i class="fa ' . $page->get('icon') . '"></i> ' : ''; ?> <?php echo $this->translate($page->get('label')); ?>
+				</a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+</li>

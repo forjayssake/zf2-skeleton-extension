@@ -1,0 +1,26 @@
+input.propel-table-filter {
+	font-size: 12px;
+	height: 2.5em;
+	margin: 0;
+}
+
+th.propel-table-actions-buttons {
+	text-align: right;
+}
+
+div.propel-table-actions-btn-group {
+	vertical-align: auto !important;
+}
+
+div.propel-table-checkbox-form {
+	display: none;
+	margin-top: 50px;
+}
+
+button.bulk-options-trigger {
+	display: none;
+}
+
+td.propel-row-selected {
+	background-color: #D8ECF2 !important;
+}

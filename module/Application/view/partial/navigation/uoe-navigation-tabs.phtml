@@ -1,0 +1,58 @@
+<?php 
+	$serviceLocator = $this->getHelperPluginManager()->getServiceLocator();
+	$routeMatch 	= $serviceLocator->get('Application')->getMvcEvent()->getRouteMatch();
+	$routeName 		= is_null($routeMatch) ? null : $routeMatch->getMatchedRouteName();
+	$params 		= is_null($routeMatch) ? [] : $routeMatch->getParams();
+	$user			= User::getLoggedIn();
+	
+	foreach($this->container as $page) :
+		
+		$subPages = $page->get('pages');
+		$showTabs = [];
+		if (!is_null($subPages) && count($subPages) > 0)
+		{
+			foreach($subPages as $subPage)
+			{
+				$sysAdminOnly = $subPage->get('sys-admin-only');
+				if($sysAdminOnly && !$user->getsystemAdministrator())
+					continue;
+
+				$assertRole = new \Application\Assertion\AssertUserInRoleHeirarchy($user, $subPage->get('base-role')); 
+				if (!$assertRole->assert())
+					continue;
+				
+				$validRoutes = $subPage->get('routes');
+				if (is_array($validRoutes) && in_array($routeName, $validRoutes))
+				{
+					$showTabs[] = $subPage;
+				}
+			}
+		}
+		
+		if (count($showTabs) > 0) :
+?>
+			<div class="nav ">
+				<ul class="nav nav-tabs">
+					<?php 
+						foreach($showTabs as $tab) :
+							$urlParams = !is_null($tab->get('params')) ? array_intersect_key($params, $tab->get('params')) : [];
+							if (!is_null($tab->get('action'))) {
+								$urlParams['action'] = $tab->get('action');
+							}
+							
+							$active = $routeName == $tab->get('route');
+							if ($active && isset($params['action']) && !is_null($tab->get('action'))) {
+								$active = $params['action'] == $tab->get('action');
+							}
+					?>
+						 <li role="presentation" class="<?php echo $active ? 'active' : ''; ?> <?php echo !is_null($tab->get('align')) && $tab->get('align') == 'right' ? 'pull-right' : ''; ?>">
+						 	<a href="<?php echo $this->url($tab->get('route'), $urlParams); ?>">
+						 		<?php echo !is_null($tab->get('icon')) ? '<i class="fa ' . $tab->get('icon') . '"></i> ' : ''; ?> <?php echo $this->translate($tab->get('label')); ?>
+						 	</a>
+						 </li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		
+		<?php endif; ?>
+<?php endforeach; ?>

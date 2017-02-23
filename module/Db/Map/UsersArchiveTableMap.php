@@ -1,0 +1,500 @@
+<?php
+
+namespace Map;
+
+use \UsersArchive;
+use \UsersArchiveQuery;
+use Propel\Runtime\Propel;
+use Propel\Runtime\ActiveQuery\Criteria;
+use Propel\Runtime\ActiveQuery\InstancePoolTrait;
+use Propel\Runtime\Connection\ConnectionInterface;
+use Propel\Runtime\DataFetcher\DataFetcherInterface;
+use Propel\Runtime\Exception\PropelException;
+use Propel\Runtime\Map\RelationMap;
+use Propel\Runtime\Map\TableMap;
+use Propel\Runtime\Map\TableMapTrait;
+
+
+/**
+ * This class defines the structure of the 'users_archive' table.
+ *
+ *
+ *
+ * This map class is used by Propel to do runtime db structure discovery.
+ * For example, the createSelectSql() method checks the type of a given column used in an
+ * ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-insensitive
+ * (i.e. if it's a text column type).
+ *
+ */
+class UsersArchiveTableMap extends TableMap
+{
+    use InstancePoolTrait;
+    use TableMapTrait;
+
+    /**
+     * The (dot-path) name of this class
+     */
+    const CLASS_NAME = '.Map.UsersArchiveTableMap';
+
+    /**
+     * The default database name for this class
+     */
+    const DATABASE_NAME = 'default';
+
+    /**
+     * The table name for this class
+     */
+    const TABLE_NAME = 'users_archive';
+
+    /**
+     * The related Propel class for this table
+     */
+    const OM_CLASS = '\\UsersArchive';
+
+    /**
+     * A class that can be returned by this tableMap
+     */
+    const CLASS_DEFAULT = 'UsersArchive';
+
+    /**
+     * The total number of columns
+     */
+    const NUM_COLUMNS = 14;
+
+    /**
+     * The number of lazy-loaded columns
+     */
+    const NUM_LAZY_LOAD_COLUMNS = 0;
+
+    /**
+     * The number of columns to hydrate (NUM_COLUMNS - NUM_LAZY_LOAD_COLUMNS)
+     */
+    const NUM_HYDRATE_COLUMNS = 14;
+
+    /**
+     * the column name for the id field
+     */
+    const COL_ID = 'users_archive.id';
+
+    /**
+     * the column name for the _role_id field
+     */
+    const COL__ROLE_ID = 'users_archive._role_id';
+
+    /**
+     * the column name for the title field
+     */
+    const COL_TITLE = 'users_archive.title';
+
+    /**
+     * the column name for the firstName field
+     */
+    const COL_FIRSTNAME = 'users_archive.firstName';
+
+    /**
+     * the column name for the lastName field
+     */
+    const COL_LASTNAME = 'users_archive.lastName';
+
+    /**
+     * the column name for the password field
+     */
+    const COL_PASSWORD = 'users_archive.password';
+
+    /**
+     * the column name for the email field
+     */
+    const COL_EMAIL = 'users_archive.email';
+
+    /**
+     * the column name for the username field
+     */
+    const COL_USERNAME = 'users_archive.username';
+
+    /**
+     * the column name for the authenticationType field
+     */
+    const COL_AUTHENTICATIONTYPE = 'users_archive.authenticationType';
+
+    /**
+     * the column name for the systemAdministrator field
+     */
+    const COL_SYSTEMADMINISTRATOR = 'users_archive.systemAdministrator';
+
+    /**
+     * the column name for the userData field
+     */
+    const COL_USERDATA = 'users_archive.userData';
+
+    /**
+     * the column name for the created_at field
+     */
+    const COL_CREATED_AT = 'users_archive.created_at';
+
+    /**
+     * the column name for the updated_at field
+     */
+    const COL_UPDATED_AT = 'users_archive.updated_at';
+
+    /**
+     * the column name for the archived_at field
+     */
+    const COL_ARCHIVED_AT = 'users_archive.archived_at';
+
+    /**
+     * The default string format for model objects of the related table
+     */
+    const DEFAULT_STRING_FORMAT = 'YAML';
+
+    /**
+     * holds an array of fieldnames
+     *
+     * first dimension keys are the type constants
+     * e.g. self::$fieldNames[self::TYPE_PHPNAME][0] = 'Id'
+     */
+    protected static $fieldNames = array (
+        self::TYPE_PHPNAME       => array('id', '_role_id', 'title', 'firstName', 'lastName', 'password', 'email', 'username', 'authenticationType', 'systemAdministrator', 'userData', 'CreatedAt', 'UpdatedAt', 'ArchivedAt', ),
+        self::TYPE_CAMELNAME     => array('id', '_role_id', 'title', 'firstName', 'lastName', 'password', 'email', 'username', 'authenticationType', 'systemAdministrator', 'userData', 'createdAt', 'updatedAt', 'archivedAt', ),
+        self::TYPE_COLNAME       => array(UsersArchiveTableMap::COL_ID, UsersArchiveTableMap::COL__ROLE_ID, UsersArchiveTableMap::COL_TITLE, UsersArchiveTableMap::COL_FIRSTNAME, UsersArchiveTableMap::COL_LASTNAME, UsersArchiveTableMap::COL_PASSWORD, UsersArchiveTableMap::COL_EMAIL, UsersArchiveTableMap::COL_USERNAME, UsersArchiveTableMap::COL_AUTHENTICATIONTYPE, UsersArchiveTableMap::COL_SYSTEMADMINISTRATOR, UsersArchiveTableMap::COL_USERDATA, UsersArchiveTableMap::COL_CREATED_AT, UsersArchiveTableMap::COL_UPDATED_AT, UsersArchiveTableMap::COL_ARCHIVED_AT, ),
+        self::TYPE_FIELDNAME     => array('id', '_role_id', 'title', 'firstName', 'lastName', 'password', 'email', 'username', 'authenticationType', 'systemAdministrator', 'userData', 'created_at', 'updated_at', 'archived_at', ),
+        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, )
+    );
+
+    /**
+     * holds an array of keys for quick access to the fieldnames array
+     *
+     * first dimension keys are the type constants
+     * e.g. self::$fieldKeys[self::TYPE_PHPNAME]['Id'] = 0
+     */
+    protected static $fieldKeys = array (
+        self::TYPE_PHPNAME       => array('id' => 0, '_role_id' => 1, 'title' => 2, 'firstName' => 3, 'lastName' => 4, 'password' => 5, 'email' => 6, 'username' => 7, 'authenticationType' => 8, 'systemAdministrator' => 9, 'userData' => 10, 'CreatedAt' => 11, 'UpdatedAt' => 12, 'ArchivedAt' => 13, ),
+        self::TYPE_CAMELNAME     => array('id' => 0, '_role_id' => 1, 'title' => 2, 'firstName' => 3, 'lastName' => 4, 'password' => 5, 'email' => 6, 'username' => 7, 'authenticationType' => 8, 'systemAdministrator' => 9, 'userData' => 10, 'createdAt' => 11, 'updatedAt' => 12, 'archivedAt' => 13, ),
+        self::TYPE_COLNAME       => array(UsersArchiveTableMap::COL_ID => 0, UsersArchiveTableMap::COL__ROLE_ID => 1, UsersArchiveTableMap::COL_TITLE => 2, UsersArchiveTableMap::COL_FIRSTNAME => 3, UsersArchiveTableMap::COL_LASTNAME => 4, UsersArchiveTableMap::COL_PASSWORD => 5, UsersArchiveTableMap::COL_EMAIL => 6, UsersArchiveTableMap::COL_USERNAME => 7, UsersArchiveTableMap::COL_AUTHENTICATIONTYPE => 8, UsersArchiveTableMap::COL_SYSTEMADMINISTRATOR => 9, UsersArchiveTableMap::COL_USERDATA => 10, UsersArchiveTableMap::COL_CREATED_AT => 11, UsersArchiveTableMap::COL_UPDATED_AT => 12, UsersArchiveTableMap::COL_ARCHIVED_AT => 13, ),
+        self::TYPE_FIELDNAME     => array('id' => 0, '_role_id' => 1, 'title' => 2, 'firstName' => 3, 'lastName' => 4, 'password' => 5, 'email' => 6, 'username' => 7, 'authenticationType' => 8, 'systemAdministrator' => 9, 'userData' => 10, 'created_at' => 11, 'updated_at' => 12, 'archived_at' => 13, ),
+        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, )
+    );
+
+    /**
+     * Initialize the table attributes and columns
+     * Relations are not initialized by this method since they are lazy loaded
+     *
+     * @return void
+     * @throws PropelException
+     */
+    public function initialize()
+    {
+        // attributes
+        $this->setName('users_archive');
+        $this->setPhpName('UsersArchive');
+        $this->setIdentifierQuoting(false);
+        $this->setClassName('\\UsersArchive');
+        $this->setPackage('');
+        $this->setUseIdGenerator(false);
+        // columns
+        $this->addPrimaryKey('id', 'id', 'INTEGER', true, null, null);
+        $this->addColumn('_role_id', '_role_id', 'INTEGER', true, null, null);
+        $this->addColumn('title', 'title', 'VARCHAR', true, 10, null);
+        $this->addColumn('firstName', 'firstName', 'VARCHAR', true, 255, null);
+        $this->addColumn('lastName', 'lastName', 'VARCHAR', true, 255, null);
+        $this->addColumn('password', 'password', 'VARCHAR', true, 255, null);
+        $this->addColumn('email', 'email', 'VARCHAR', true, 255, null);
+        $this->addColumn('username', 'username', 'VARCHAR', true, 255, null);
+        $this->addColumn('authenticationType', 'authenticationType', 'TINYINT', true, 1, 0);
+        $this->addColumn('systemAdministrator', 'systemAdministrator', 'BOOLEAN', true, 1, false);
+        $this->addColumn('userData', 'userData', 'LONGVARCHAR', false, null, null);
+        $this->addColumn('created_at', 'CreatedAt', 'TIMESTAMP', false, null, null);
+        $this->addColumn('updated_at', 'UpdatedAt', 'TIMESTAMP', false, null, null);
+        $this->addColumn('archived_at', 'ArchivedAt', 'TIMESTAMP', false, null, null);
+    } // initialize()
+
+    /**
+     * Build the RelationMap objects for this table relationships
+     */
+    public function buildRelations()
+    {
+    } // buildRelations()
+
+    /**
+     * Retrieves a string version of the primary key from the DB resultset row that can be used to uniquely identify a row in this table.
+     *
+     * For tables with a single-column primary key, that simple pkey value will be returned.  For tables with
+     * a multi-column primary key, a serialize()d version of the primary key will be returned.
+     *
+     * @param array  $row       resultset row.
+     * @param int    $offset    The 0-based offset for reading from the resultset row.
+     * @param string $indexType One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_CAMELNAME
+     *                           TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM
+     *
+     * @return string The primary key hash of the row
+     */
+    public static function getPrimaryKeyHashFromRow($row, $offset = 0, $indexType = TableMap::TYPE_NUM)
+    {
+        // If the PK cannot be derived from the row, return NULL.
+        if ($row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)] === null) {
+            return null;
+        }
+
+        return null === $row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)] || is_scalar($row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)]) || is_callable([$row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)], '__toString']) ? (string) $row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)] : $row[TableMap::TYPE_NUM == $indexType ? 0 + $offset : static::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)];
+    }
+
+    /**
+     * Retrieves the primary key from the DB resultset row
+     * For tables with a single-column primary key, that simple pkey value will be returned.  For tables with
+     * a multi-column primary key, an array of the primary key columns will be returned.
+     *
+     * @param array  $row       resultset row.
+     * @param int    $offset    The 0-based offset for reading from the resultset row.
+     * @param string $indexType One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_CAMELNAME
+     *                           TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM
+     *
+     * @return mixed The primary key of the row
+     */
+    public static function getPrimaryKeyFromRow($row, $offset = 0, $indexType = TableMap::TYPE_NUM)
+    {
+        return (int) $row[
+            $indexType == TableMap::TYPE_NUM
+                ? 0 + $offset
+                : self::translateFieldName('id', TableMap::TYPE_PHPNAME, $indexType)
+        ];
+    }
+    
+    /**
+     * The class that the tableMap will make instances of.
+     *
+     * If $withPrefix is true, the returned path
+     * uses a dot-path notation which is translated into a path
+     * relative to a location on the PHP include_path.
+     * (e.g. path.to.MyClass -> 'path/to/MyClass.php')
+     *
+     * @param boolean $withPrefix Whether or not to return the path with the class name
+     * @return string path.to.ClassName
+     */
+    public static function getOMClass($withPrefix = true)
+    {
+        return $withPrefix ? UsersArchiveTableMap::CLASS_DEFAULT : UsersArchiveTableMap::OM_CLASS;
+    }
+
+    /**
+     * Populates an object of the default type or an object that inherit from the default.
+     *
+     * @param array  $row       row returned by DataFetcher->fetch().
+     * @param int    $offset    The 0-based offset for reading from the resultset row.
+     * @param string $indexType The index type of $row. Mostly DataFetcher->getIndexType().
+                                 One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_CAMELNAME
+     *                           TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM.
+     *
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     * @return array           (UsersArchive object, last column rank)
+     */
+    public static function populateObject($row, $offset = 0, $indexType = TableMap::TYPE_NUM)
+    {
+        $key = UsersArchiveTableMap::getPrimaryKeyHashFromRow($row, $offset, $indexType);
+        if (null !== ($obj = UsersArchiveTableMap::getInstanceFromPool($key))) {
+            // We no longer rehydrate the object, since this can cause data loss.
+            // See http://www.propelorm.org/ticket/509
+            // $obj->hydrate($row, $offset, true); // rehydrate
+            $col = $offset + UsersArchiveTableMap::NUM_HYDRATE_COLUMNS;
+        } else {
+            $cls = UsersArchiveTableMap::OM_CLASS;
+            /** @var UsersArchive $obj */
+            $obj = new $cls();
+            $col = $obj->hydrate($row, $offset, false, $indexType);
+            UsersArchiveTableMap::addInstanceToPool($obj, $key);
+        }
+
+        return array($obj, $col);
+    }
+
+    /**
+     * The returned array will contain objects of the default type or
+     * objects that inherit from the default.
+     *
+     * @param DataFetcherInterface $dataFetcher
+     * @return array
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     */
+    public static function populateObjects(DataFetcherInterface $dataFetcher)
+    {
+        $results = array();
+    
+        // set the class once to avoid overhead in the loop
+        $cls = static::getOMClass(false);
+        // populate the object(s)
+        while ($row = $dataFetcher->fetch()) {
+            $key = UsersArchiveTableMap::getPrimaryKeyHashFromRow($row, 0, $dataFetcher->getIndexType());
+            if (null !== ($obj = UsersArchiveTableMap::getInstanceFromPool($key))) {
+                // We no longer rehydrate the object, since this can cause data loss.
+                // See http://www.propelorm.org/ticket/509
+                // $obj->hydrate($row, 0, true); // rehydrate
+                $results[] = $obj;
+            } else {
+                /** @var UsersArchive $obj */
+                $obj = new $cls();
+                $obj->hydrate($row);
+                $results[] = $obj;
+                UsersArchiveTableMap::addInstanceToPool($obj, $key);
+            } // if key exists
+        }
+
+        return $results;
+    }
+    /**
+     * Add all the columns needed to create a new object.
+     *
+     * Note: any columns that were marked with lazyLoad="true" in the
+     * XML schema will not be added to the select list and only loaded
+     * on demand.
+     *
+     * @param Criteria $criteria object containing the columns to add.
+     * @param string   $alias    optional table alias
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     */
+    public static function addSelectColumns(Criteria $criteria, $alias = null)
+    {
+        if (null === $alias) {
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_ID);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL__ROLE_ID);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_TITLE);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_FIRSTNAME);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_LASTNAME);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_PASSWORD);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_EMAIL);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_USERNAME);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_AUTHENTICATIONTYPE);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_SYSTEMADMINISTRATOR);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_USERDATA);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_CREATED_AT);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_UPDATED_AT);
+            $criteria->addSelectColumn(UsersArchiveTableMap::COL_ARCHIVED_AT);
+        } else {
+            $criteria->addSelectColumn($alias . '.id');
+            $criteria->addSelectColumn($alias . '._role_id');
+            $criteria->addSelectColumn($alias . '.title');
+            $criteria->addSelectColumn($alias . '.firstName');
+            $criteria->addSelectColumn($alias . '.lastName');
+            $criteria->addSelectColumn($alias . '.password');
+            $criteria->addSelectColumn($alias . '.email');
+            $criteria->addSelectColumn($alias . '.username');
+            $criteria->addSelectColumn($alias . '.authenticationType');
+            $criteria->addSelectColumn($alias . '.systemAdministrator');
+            $criteria->addSelectColumn($alias . '.userData');
+            $criteria->addSelectColumn($alias . '.created_at');
+            $criteria->addSelectColumn($alias . '.updated_at');
+            $criteria->addSelectColumn($alias . '.archived_at');
+        }
+    }
+
+    /**
+     * Returns the TableMap related to this object.
+     * This method is not needed for general use but a specific application could have a need.
+     * @return TableMap
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     */
+    public static function getTableMap()
+    {
+        return Propel::getServiceContainer()->getDatabaseMap(UsersArchiveTableMap::DATABASE_NAME)->getTable(UsersArchiveTableMap::TABLE_NAME);
+    }
+
+    /**
+     * Add a TableMap instance to the database for this tableMap class.
+     */
+    public static function buildTableMap()
+    {
+        $dbMap = Propel::getServiceContainer()->getDatabaseMap(UsersArchiveTableMap::DATABASE_NAME);
+        if (!$dbMap->hasTable(UsersArchiveTableMap::TABLE_NAME)) {
+            $dbMap->addTableObject(new UsersArchiveTableMap());
+        }
+    }
+
+    /**
+     * Performs a DELETE on the database, given a UsersArchive or Criteria object OR a primary key value.
+     *
+     * @param mixed               $values Criteria or UsersArchive object or primary key or array of primary keys
+     *              which is used to create the DELETE statement
+     * @param  ConnectionInterface $con the connection to use
+     * @return int             The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows
+     *                         if supported by native driver or if emulated using Propel.
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     */
+     public static function doDelete($values, ConnectionInterface $con = null)
+     {
+        if (null === $con) {
+            $con = Propel::getServiceContainer()->getWriteConnection(UsersArchiveTableMap::DATABASE_NAME);
+        }
+
+        if ($values instanceof Criteria) {
+            // rename for clarity
+            $criteria = $values;
+        } elseif ($values instanceof \UsersArchive) { // it's a model object
+            // create criteria based on pk values
+            $criteria = $values->buildPkeyCriteria();
+        } else { // it's a primary key, or an array of pks
+            $criteria = new Criteria(UsersArchiveTableMap::DATABASE_NAME);
+            $criteria->add(UsersArchiveTableMap::COL_ID, (array) $values, Criteria::IN);
+        }
+
+        $query = UsersArchiveQuery::create()->mergeWith($criteria);
+
+        if ($values instanceof Criteria) {
+            UsersArchiveTableMap::clearInstancePool();
+        } elseif (!is_object($values)) { // it's a primary key, or an array of pks
+            foreach ((array) $values as $singleval) {
+                UsersArchiveTableMap::removeInstanceFromPool($singleval);
+            }
+        }
+
+        return $query->delete($con);
+    }
+
+    /**
+     * Deletes all rows from the users_archive table.
+     *
+     * @param ConnectionInterface $con the connection to use
+     * @return int The number of affected rows (if supported by underlying database driver).
+     */
+    public static function doDeleteAll(ConnectionInterface $con = null)
+    {
+        return UsersArchiveQuery::create()->doDeleteAll($con);
+    }
+
+    /**
+     * Performs an INSERT on the database, given a UsersArchive or Criteria object.
+     *
+     * @param mixed               $criteria Criteria or UsersArchive object containing data that is used to create the INSERT statement.
+     * @param ConnectionInterface $con the ConnectionInterface connection to use
+     * @return mixed           The new primary key.
+     * @throws PropelException Any exceptions caught during processing will be
+     *                         rethrown wrapped into a PropelException.
+     */
+    public static function doInsert($criteria, ConnectionInterface $con = null)
+    {
+        if (null === $con) {
+            $con = Propel::getServiceContainer()->getWriteConnection(UsersArchiveTableMap::DATABASE_NAME);
+        }
+
+        if ($criteria instanceof Criteria) {
+            $criteria = clone $criteria; // rename for clarity
+        } else {
+            $criteria = $criteria->buildCriteria(); // build Criteria from UsersArchive object
+        }
+
+
+        // Set the correct dbName
+        $query = UsersArchiveQuery::create()->mergeWith($criteria);
+
+        // use transaction because $criteria could contain info
+        // for more than one table (I guess, conceivably)
+        return $con->transaction(function () use ($con, $query) {
+            return $query->doInsert($con);
+        });
+    }
+
+} // UsersArchiveTableMap
+// This is the static code needed to register the TableMap for this table with the main Propel class.
+//
+UsersArchiveTableMap::buildTableMap();

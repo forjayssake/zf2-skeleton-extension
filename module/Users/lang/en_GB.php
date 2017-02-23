@@ -1,0 +1,57 @@
+<?php
+return array(
+	
+	'USERS' => 'Users',
+	'FIRST_NAME' => 'Forename',
+	'LAST_NAME' => 'Surname',
+	'EMAIL' => 'Email',
+	'USERNAME' => 'Username',
+	'NAME' => 'Name',
+	'USER_NOT_FOUND_ID_X' => 'User not found for id: `%s`',
+	'USER_DETAILS' => 'User Details',
+	'SYSTEM_DETAILS' => 'System Details',
+	'AUTHENTICATION_TYPE' => 'Authentication Type',
+	'SYSTEM_ADMINISTRATOR' => 'System Administrator',
+	'DATE_CREATED' => 'Created',
+	'AUTHENTICATION_DB' => 'Database Authentication',
+	'AUTHENTICATE_LDAP' => 'LDAP Authentication',
+	'ROLE' => 'Role',
+	'TITLE' => 'Title',
+	
+	'SAVING_USER_X_SUCCESS' => 'User: `%s` saved successfully',
+	'SAVING_USER_X_FAILED' => 'Adding user `%s` failed!',
+	'ADD_NEW_USER' => 'Add New User', 
+	'EDIT_USER' => 'Edit User',
+	'EDIT_USER_X' => 'Edit `%s`',
+	'DELETED_USER_X_SUCCESS' => 'User %s deleted successfully',
+	'ERROR_DELETING_USER_X' => 'Failed deleted %s!',
+	'DELETE_USER_X' => 'Delete User: %s',
+	'DELETE_USER_MESSAGE' => 'Deleting a user cannot be undone. Please confirm this action.',
+	
+	'ADD_PASSWORD' => 'Add Password',
+	'CHANGE_PASSWORD' => 'Change Password',
+	'CONFIRM_PASSWORD' => 'Confirm Password',
+	'SAVING_USER_X_SUCCESS_ADD_PASSWORD' => 'User: %s added successfully. Please create a password for this user.',
+	'PASSWORD_SAVED_SUCCESSFULLY' => 'Password saved successfully',
+	'PASSWORD_FAILED_CONSTRAINTS' => '<strong>The password you have entered is invalid: </strong>',
+	'PASSWORD_TOO_SHORT' => 'Password is too short',
+	'PASSWORD_FAILED_UPPER_CASE' => 'Password must contain at least one uppercase letter',
+	'PASSWORD_FAILED_NUMERIC' => 'Password must contain at least one number',
+	'PASSWORD_FAILED_SPECIAL_CHARACTER' => 'Password must contain at least one special character',
+	'PASSWORD_CONSTRAINT_RULES' => '<strong>User passwords must contain the following: </strong>',
+	'PASSWORD_MIN_LENGTH_X' => 'Password must contain at least %s characters',
+	'PASSWORDS_DO_NOT_MATCH' => '<strong>Passwords do not match!</strong>',
+
+	'USERS_LIST' => 'User List',
+	'USERS_ADD' => 'Add User',
+	'USERS_VIEW' => 'User Details',
+	'USERS_EDIT' => 'Edit User',
+	'USERS_DELETE' => 'Delete User',
+
+	'TEMPLATES_VIEW' => 'Template Details',
+	'TEMPLATES_ADD' => 'Add Template',
+	'TEMPLATES_EDIT' => 'Edit Template',
+	'TEMPLATES_DELETE' => 'Delete Template',
+
+
+);

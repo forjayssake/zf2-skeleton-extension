@@ -1,0 +1,11 @@
+.nav .open > a {
+	border-color: transparent !important;
+}
+
+.nav .open > a:hover {
+	border-color: transparent !important;
+}
+
+.nav .open > a:focus {
+	border-color: transparent !important;
+}

@@ -1,0 +1,72 @@
+<?php 
+	$config = $this->table->getConfig();
+	$columns = $this->table->getColumns();
+	$currentSort = $this->table->getPageSortFromRequest();
+?>
+<thead class="propel-table-header">
+	<tr>
+	
+		<?php if ($this->table->hasCheckboxes()) : ?>
+			<th><input type="checkbox" name="table-select-all" id="table-select-all" class="table-checkbox"></th>
+		<?php endif; ?>
+	
+		<?php foreach($columns as $columnName => $columnConfig) : ?>
+					<th>
+				<?php if (isset($columnConfig['canSort']) &&  $columnConfig['canSort'] == true) : ?>
+				
+					<a href="<?php echo $this->table->getSortLink($columnName); ?>">
+						
+						<?php echo $this->translate($columnConfig['label']); ?>
+						
+						<?php if ($currentSort['columnName'] == $columnName) : ?>
+						
+							<?php if ($currentSort['sortOrder'] == 'ASC') : ?>
+								<i class="fa fa-sort-up"></i>
+							<?php else : ?>
+								<i class="fa fa-sort-down"></i>
+							<?php endif; ?>
+							
+						<?php endif; ?>
+					</a>
+				
+				<?php else : ?>
+					<?php echo $this->translate($columnConfig['label']); ?>
+				<?php endif; ?>
+			
+			</th>
+		<?php endforeach; ?>
+		
+		<?php if ($this->table->hasLinkButtons()) : ?>
+		
+			<th class="propel-table-actions-header "><?php echo $this->translate('ACTIONS'); ?></th>
+			
+		<?php endif; ?>
+	</tr>
+	
+	<?php if ($this->table->hasFilters()) : ?>
+		
+		<tr class="propel-table-filters">
+			
+			<?php if ($this->table->hasCheckboxes()) : ?>
+				<th></th>
+			<?php endif; ?>
+		
+			<?php foreach($columns as $columnName => $columnConfig) : ?>
+				<td>
+					<?php if (isset($columnConfig['filter'])) : ?>
+						<?php echo $this->formRow($this->table->getFilterElement($columnName), \TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE); ?>
+					<?php endif; ?>
+				</td>
+			<?php endforeach; ?>
+			
+			<th class="actions propel-table-actions-buttons ">
+				<div class="btn-group propel-table-actions-btn-group ">
+					<button name="filteroption" title="<?php echo $this->translate('RUN_FILTER');?>" class="btn alert-success btn-xs propel-filter-run" type="submit" value="runfilter" /><i class="fa fa-search"></i></button>
+					<button name="filteroption" title="<?php echo $this->translate('CLEAR_FILTER');?>" class="btn alert-danger btn-xs propel-filter-clear" type="submit" value="clearfilter" /><i class="fa fa-remove"></i></button>
+				</div>
+			</th>
+			
+		</tr>
+		
+	<?php endif; ?>
+</thead>

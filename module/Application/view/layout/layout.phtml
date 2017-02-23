@@ -1,0 +1,97 @@
+<?php 
+	echo $this->doctype();
+	$serviceLocator = $this->getHelperPluginManager()->getServiceLocator();
+	$config			= $serviceLocator->get('config');
+	$user			= User::getLoggedIn();
+?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <?php echo $this->headTitle($this->translate('SITE_NAME'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon-32x32.png'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap-datepicker.css'))
+                        ->prependStylesheet($this->basePath('css/uoe-branding.css'))
+                        ->prependStylesheet($this->basePath('css/table.css'))
+                        ->prependStylesheet($this->basePath('css/navigation.css'))
+                        ->prependStylesheet($this->basePath('css/font-awesome-4.6.3/css/font-awesome.min.css'));
+       	?>
+
+        <?php echo $this->headScript()
+        	->prependFile($this->basePath('js/bootstrap-datetimepicker.js'))
+        	->prependFile($this->basePath('js/common.js'))
+        	->prependFile($this->basePath('js/global-search.js'))
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+           	->prependFile($this->basePath('js/bootbox.min.js'))
+            ->prependFile($this->basePath('js/jquery.min.js'))
+            ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/moment/moment-with-locales.js')); 
+       	?>
+
+    </head>
+    <body class="brandinguoe layout ">
+    	<?php echo $this->partial('partial/uoe/header-botanical');?>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand " href="<?php echo $this->url('home') ?>">
+                        <?php echo $this->translate('SITE_NAME') ?>
+                    </a>
+                </div>
+                <?php
+                	$this->navigation()->menu()->setPartial(['partial/navigation/uoe-navigation', 'default']);
+                	echo $this->navigation('navigation')->menu(); 
+                ?>
+            </div>
+        </nav>
+		<?php
+			$this->navigation()->menu()->setPartial(['partial/navigation/uoe-navigation-tabs', 'default']);
+			echo $this->navigation('navigation')->menu();
+
+            $assertSetup = new \Application\Assertion\AssertUserCanViewSetupMenu($user, $config);
+			if ($assertSetup->assert())
+			{
+				$this->navigation()->menu()->setPartial(['partial/navigation/uoe-navigation-tabs', 'setup']);
+				echo $this->navigation('setup_navigation')->menu();
+			}
+		?>
+        <div class="container">
+            <?php echo $this->ShowFlashMessages('error',   $this->flashErrorMessages);?>
+    		<?php echo $this->ShowFlashMessages('warning', $this->flashWarningMessages);?>
+    		<?php echo $this->ShowFlashMessages('info',    $this->flashInfoMessages);?>
+    		<?php echo $this->ShowFlashMessages('success', $this->flashSuccessMessages);?>
+        	
+            <?php echo $this->content; ?>
+            
+        </div>
+        <hr>
+        
+        <?php echo $this->partial('partial/uoe/footer');?>
+        <?php echo $this->inlineScript() ?>
+       
+        <?php if (isset($config['global_search']) && $config['global_search']['show_search'] === true) : ?>
+        	<div class="row ">
+				<?php echo $this->GenericModal('GlobalSearchPleaseWaitModal', 'PLEASE_WAIT', [], 'partial/global-search-results'); ?>
+			</div>
+		<?php endif; ?>
+		
+    </body>
+</html>

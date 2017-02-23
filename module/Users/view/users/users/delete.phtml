@@ -1,0 +1,7 @@
+<div class="row delete-wrapper ">
+	<div class="alert alert-danger">
+		<h1 class=""><i class="fa fa-warning"></i> <?php echo sprintf($this->translate('DELETE_USER_X'), $this->userDetail); ?></h1>
+		<p><?php echo $this->translate('DELETE_USER_MESSAGE'); ?></p>
+	</div>
+	<?php echo $this->form($this->form, \TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE); ?>
+</div>

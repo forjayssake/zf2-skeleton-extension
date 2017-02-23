@@ -1,0 +1,117 @@
+<?php
+$query = $this->table->getRequestObject()->getQuery()->toArray();
+unset($query['sort']);
+unset($query['page']);
+
+$currentSort = [];
+$sort = $this->table->getPageSortFromRequest();
+
+if($sort !== false) {
+	$sortOrder = $sort['sortOrder'] == 'ASC' ? '+' : '-';
+	$currentSort['sort'] = $sortOrder.$sort['columnName'];
+}
+$totalItems 	= $this->table->getPaginator()->getTotalItemCount();
+
+if ($totalItems > 0) {
+
+	$thisPage	= $this->table->getPaginator()->getCurrentPageNumber();
+	$rowCount	= $this->table->getPaginator()->getItemCountPerPage();
+	$low 		= $thisPage == 1 ? 1 : ($thisPage - 1) * ($rowCount)+1;
+	$high 		= ($rowCount > $totalItems ? $totalItems : $thisPage * $rowCount);
+}
+
+?>
+<?php if ($this->pageCount): ?>
+
+	<div class="pull-left pagination-wrapper">
+		<?php 
+			if ($totalItems == 0) {
+				echo $this->translate('PAGINATION_ZERO_ITEMS');
+			} else {
+				echo sprintf($this->translate('PAGINATION_RANGE_XX_TOTAL_X'), $low, $high, (int)$totalItems);
+			}
+		?>
+	</div>
+	
+	<div class="pagination-controls btn-group pull-right">
+		
+		<!-- First page link -->
+	    <?php if (isset($this->previous)): ?>
+	      <a class="btn btn-xs btn-default" 
+	      	href="<?php echo $this->url(
+	      						null, 
+	      						[], 
+	      						['query' => array_merge(['page' => $this->first], $currentSort, $query)], 
+	      						true); ?>" 
+	      	title="<?=$this->translate('FIRST_PAGE');?>"
+	      >
+	        <?=$this->translate('FIRST');?>
+	      </a>
+	    <?php else: ?>
+	       <a class="btn btn-xs btn-default disabled" href="#"><?=$this->translate('FIRST');?></a>
+	    <?php endif; ?>
+	
+		<!-- Previous page link -->
+		<?php if (isset($this->previous)): ?>
+		  <a class="btn btn-xs btn-default" 
+		  	href="<?php echo $this->url(
+		  						null, 
+		  						[], 
+		  						['query' => array_merge(['page' => $this->previous], $currentSort, $query)],
+		  						true); ?>" 
+		  	title="<?php echo $this->translate('PREVIOUS')?>"
+		  >
+		    <i class="fa fa-angle-left"></i>
+		  </a>
+		<?php else: ?>
+		  <a class="btn btn-xs btn-default disabled" href="#"><i class="fa fa-angle-left"></i></a>
+		<?php endif; ?>
+		
+		<!-- Numbered page links -->
+		<?php foreach ($this->pagesInRange as $page): ?>
+		  <?php if ($page != $this->current): ?>
+		    <a class="btn btn-xs btn-default " href="<?php echo $this->url(
+		    					null, 
+		    					[],
+		    					['query' => array_merge(['page' => $page], $currentSort, $query)],
+		    					true); ?>">
+		        <?php echo $page; ?>
+		    </a>
+		  <?php else: ?>
+		    <a class="btn btn-xs btn-primary disabled" href="#"><?php echo $page; ?></a>
+		  <?php endif; ?>
+		<?php endforeach; ?>
+	
+		<!-- Next page link -->
+		<?php if (isset($this->next)): ?>
+		  <a class="btn btn-xs btn-default " href="<?php echo $this->url(
+		  						null, 
+		  						[],
+		  						['query' => array_merge(['page' => $this->next], $currentSort, $query)],
+		  						true); ?>" 
+		  	title="<?php echo $this->translate('NEXT')?>"
+		  >
+		   <i class="fa fa-angle-right"></i>
+		  </a>
+		<?php else: ?>
+		  <a class="btn btn-xs btn-default disabled" href="#"><i class="fa fa-angle-right"></i></a>
+		<?php endif; ?>
+	
+	    <!-- Last page link -->
+	    <?php if (isset($this->next)): ?>
+	      <a class="btn btn-xs btn-default "  href="<?php echo $this->url(
+	      						null, 
+	      						[],
+	      						['query' => array_merge(['page' => $this->last], $currentSort, $query)],
+	      						true); ?>" 
+	      	title="<?=$this->translate('LAST_PAGE');?> (<?=$this->last;?>)"
+	      >
+	        <?=$this->translate('LAST');?> (<?=$this->last;?>)
+	      </a>
+	    <?php else: ?>
+	       <a class="btn btn-xs btn-default disabled" href="#"><?=$this->translate('LAST');?></a>
+	    <?php endif; ?>
+		
+	</div>
+	
+<?php endif; ?>

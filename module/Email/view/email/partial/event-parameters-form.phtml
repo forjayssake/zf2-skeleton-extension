@@ -1,0 +1,16 @@
+<?php  $this->headScript()->appendFile('/js/template-helper.js'); ?>
+
+<form id="template-parameters-form" method="POST" action="/templates/template-parameters">
+    <input type="hidden" value="" name="eventname">
+</form>
+
+<div class="alert alert-warning" id="zero-parameters-warning">
+    <?php echo $this->translate('ZERO_PARAMETERS_WARNING'); ?>
+</div>
+
+<div id="parameters-wrapper">
+</div>
+
+<template id="parameterOption">
+    <button id="{id}" class="btn btn-default btn-xs btn-template-parameter" data-param="{param}"><i class="fa fa-plus"></i> {buttonValue}</button>
+</template>

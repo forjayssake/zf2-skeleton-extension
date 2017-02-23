@@ -1,0 +1,49 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <?php echo $this->headTitle($this->translate('SITE_NAME'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon-32x32.png'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+                        ->prependStylesheet($this->basePath('css/uoe-branding.css'))
+        				->prependStylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css') ?>
+
+        <!-- Scripts -->
+        <?php 
+        	echo $this->headScript()
+	            ->prependFile($this->basePath('js/bootstrap.min.js'))
+	            ->prependFile($this->basePath('js/jquery.min.js')); 
+        ?>
+
+    </head>
+    <body class="brandinguoe layout ">
+    	<?php echo $this->partial('partial/uoe/header-botanical');?>
+        <div class="container">
+        
+            <?php echo $this->ShowFlashMessages('error',   $this->flashErrorMessages);?>
+    		<?php echo $this->ShowFlashMessages('info',    $this->flashInfoMessages);?>
+            <?php echo $this->ShowFlashMessages('warning', $this->flashWarningMessages);?>
+    		<?php echo $this->ShowFlashMessages('success', $this->flashSuccessMessages);?>
+
+            <?php echo $this->RenderAccessManagementMessages(); ?>
+
+            <?php echo $this->content; ?>
+            
+        </div>
+        <hr>
+        <?php echo $this->partial('partial/uoe/footer');?>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

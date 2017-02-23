@@ -1,0 +1,27 @@
+<?php $this->headScript()->appendFile('/js/ckeditor/ckeditor.js'); ?>
+
+<div class="row ">
+    <h1>
+        <i class="fa fa-plus"></i>
+        <?php echo $this->translate('ADD_NEW_TEMPLATE'); ?>
+    </h1>
+</div>
+<div class="row">
+
+    <div class="col-md-6 ">
+        <h3 class="view-subheader"><i class="fa fa-list-alt"></i> <?php echo $this->translate('TEMPLATE_DETAILS'); ?></h3>
+        <?php echo $this->form($this->form); ?>
+    </div>
+
+    <div class="col-md-6 ">
+        <h3 class="view-subheader"><i class="fa fa-circle-o"></i> <?php echo $this->translate('AVAILABLE_PARAMETERS'); ?></h3>
+        <?php echo $this->partial('partial/event-parameters-form') ;?>
+    </div>
+
+</div>
+
+<script>
+    $(function(){
+        CKEDITOR.replace($('.templates-ckeditor').attr('id'));
+    });
+</script>

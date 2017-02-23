@@ -1,0 +1,25 @@
+{
+    "name": "Add your application name here",
+    "description": "Add your description here",
+    "license": "proprietary",
+    "keywords": [
+
+    ],
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zendframework": "~2.5",
+        "zendframework/zend-ldap": "^2.5",
+		"propel/propel": "~2.0@dev",
+		"neilime/zf2-twb-bundle": "2.*@stable",
+		"acelaya/zf2-acqrcode": "0.*",
+        "satsume/ckeditor-module": "0.*",
+        "acelaya/zf2-acmailer" : "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "module/Db",
+            "Base\\": "module/Db/Base",
+            "Map\\": "module/Db/Map"
+        }
+    } 
+}

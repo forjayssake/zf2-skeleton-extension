@@ -1,0 +1,2366 @@
+/*
+     *
+     * code below taken from UoE global.css stylesheet
+     * feel free to keep it updated, the CSS in style.less should bring keep things in check
+     *
+     */
+div.brandinguoe {
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe h1,
+div.brandinguoe h2,
+div.brandinguoe h3,
+div.brandinguoe h4,
+div.brandinguoe h5,
+div.brandinguoe h6,
+div.brandinguoe p,
+div.brandinguoe blockquote,
+div.brandinguoe form,
+div.brandinguoe label,
+div.brandinguoe dl,
+div.brandinguoe fieldset,
+div.brandinguoe address {
+  margin: 0;
+}
+div.brandinguoe ul,
+div.brandinguoe ol {
+  margin: 0.5em 0;
+}
+div.brandinguoe li,
+div.brandinguoe dd {
+  margin-left: 1em;
+}
+div.brandinguoe fieldset {
+  padding: 0.5em;
+}
+div.brandinguoe body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif, Bitstream Vera Sans;
+  font-size: 100.01%;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#wrapper {
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 972px;
+}
+div.brandinguoe div#wrapperinner {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe p {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  padding-bottom: 12px;
+}
+div.brandinguoe ul {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-left: 13px;
+  padding-bottom: 5px;
+}
+div.brandinguoe ul li ul {
+  font-size: 1em;
+}
+div.brandinguoe a:link,
+div.brandinguoe a:visited {
+  color: #005dab;
+  text-decoration: underline;
+}
+div.brandinguoe a:hover,
+div.brandinguoe a:active {
+  color: #005dab;
+  text-decoration: none;
+}
+div.brandinguoe img {
+  border: medium none;
+}
+div.brandinguoe table {
+  line-height: 1.4em;
+  margin-bottom: 20px;
+}
+div.brandinguoe table caption {
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 6px;
+  text-align: left;
+}
+div.brandinguoe th {
+  background-color: #666666;
+  color: #ffffff;
+  font-size: 0.8em;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe th p {
+  font-size: 1em;
+  padding-bottom: 2px;
+}
+div.brandinguoe td {
+  background-color: #e0e0e0;
+  color: #000000;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe td p {
+  font-size: 1em;
+  padding-bottom: 0;
+}
+div.brandinguoe th a:link,
+div.brandinguoe th a:visited {
+  color: #ffffff;
+}
+div.brandinguoe th a:hover,
+div.brandinguoe th a:active {
+  color: #ffffff;
+}
+div.brandinguoe td ul li {
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding-top: 5px;
+}
+div.brandinguoe td ol li {
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding-top: 5px;
+}
+div.brandinguoe ol ul {
+  font-size: 1em;
+  margin-top: 10px !important;
+}
+div.brandinguoe .logo {
+  float: left;
+  margin-top: 20px;
+}
+div.brandinguoe .prop {
+  float: right;
+  width: 1px;
+}
+div.brandinguoe .minclear {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+div.brandinguoe .minpx {
+  height: 400px;
+}
+div.brandinguoe .minpxmap {
+  height: 973px;
+}
+div.brandinguoe .rightimage {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 5px 5px 10px 10px;
+  width: 203px;
+}
+div.brandinguoe .rightimage img,
+div.brandinguoe .rightimage .ytOverlay,
+div.brandinguoe .rightimage .rhflashmovie {
+  margin: -5px -5px 5px -10px;
+}
+div.brandinguoe .rightimage p {
+  font-size: 1em;
+  padding: 0 !important;
+}
+div.brandinguoe .rightimage2 {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 5px 0 0;
+  width: 203px;
+}
+div.brandinguoe .uofe {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+div.brandinguoe .imageElement {
+  display: none;
+}
+div.brandinguoe .footnote p {
+  font-size: 0.6em;
+}
+div.brandinguoe .credit {
+  background-color: #666666;
+  color: #ffffff;
+  font-size: 0.8em;
+  left: 0;
+  margin: -5px -5px 5px -10px;
+  padding: 0 0 0 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .credit p {
+  color: #ffffff !important;
+}
+div.brandinguoe .noscreen {
+  display: none;
+  visibility: hidden;
+}
+div.brandinguoe .campaignlogo {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+div.brandinguoe .movieinpage {
+  padding-bottom: 20px;
+}
+div.brandinguoe div#header {
+  height: 100px;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 972px;
+}
+div.brandinguoe div#supernav {
+  margin: 17px 40px 0 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.brandinguoe div#supernav a {
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#supernav a:link,
+div.brandinguoe div#supernav a:visited {
+  text-decoration: none;
+}
+div.brandinguoe div#supernav a:hover,
+div.brandinguoe div#supernav a:active {
+  text-decoration: underline;
+}
+div.brandinguoe div#supernav p {
+  font-size: 0.6em;
+  line-height: 1.4em;
+}
+div.brandinguoe div#search {
+  margin-right: 40px;
+  margin-top: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.brandinguoe .search {
+  border: 1px solid #666666;
+  font-size: 0.7em;
+  padding: 1px 2px;
+}
+div.brandinguoe .button {
+  background-color: #666666;
+  border: medium none;
+  color: #ffffff;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: 0 0 0 5px;
+  padding: 2px 1px 1px;
+}
+div.brandinguoe #search {
+  margin-top: 45px !important;
+}
+div.brandinguoe #search .button {
+  cursor: pointer;
+  padding: 5px !important;
+}
+div.brandinguoe #search .query {
+  padding: 3px !important;
+  width: 185px !important;
+}
+div.brandinguoe #search .query:focus {
+  border: 1px solid #2599fc;
+  padding: 4px !important;
+}
+div.brandinguoe #skip {
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+div.brandinguoe #skipanchor {
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 50px;
+}
+div.brandinguoe #skip:focus,
+div.brandinguoe #skip:active,
+div.brandinguoe #skip:hover {
+  background: none repeat scroll 0 0 #666666;
+  color: #ffffff;
+  font-size: 0.8em;
+  font-weight: bold;
+  height: auto;
+  left: 400px;
+  overflow: visible;
+  padding: 2px;
+  position: absolute;
+  top: 20px;
+  width: auto;
+}
+div.brandinguoe div#mainnav {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#mainnav ul {
+  font-size: 0.8em;
+  font-weight: bold;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#mainnav ul li {
+  display: inline;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+div.brandinguoe div#mainnav ul li a:link,
+div.brandinguoe div#mainnav ul li a:visited {
+  background-color: #666666;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.studying {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.studyingselected:link,
+div.brandinguoe div#mainnav ul li a.studyingselected:visited {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.studying:hover,
+div.brandinguoe div#mainnav ul li a.studying:active {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.research {
+  background-color: #330099;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.researchselected:link,
+div.brandinguoe div#mainnav ul li a.researchselected:visited {
+  background-color: #330099;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.research:hover,
+div.brandinguoe div#mainnav ul li a.research:active {
+  background-color: #494b84;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.business {
+  background-color: #cc6600;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.businessselected:link,
+div.brandinguoe div#mainnav ul li a.businessselected:visited {
+  background-color: #cc6600;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.business:hover,
+div.brandinguoe div#mainnav ul li a.business:active {
+  background-color: #cc6600;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.working {
+  background-color: #660033;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.workingselected:link,
+div.brandinguoe div#mainnav ul li a.workingselected:visited {
+  background-color: #660033;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.working:hover,
+div.brandinguoe div#mainnav ul li a.working:active {
+  background-color: #660033;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.alumni {
+  background-color: #007836;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.alumniselected:link,
+div.brandinguoe div#mainnav ul li a.alumniselected:visited {
+  background-color: #007836;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.alumni:hover,
+div.brandinguoe div#mainnav ul li a.alumni:active {
+  background-color: #007836;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.schools {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.schoolsselected:link,
+div.brandinguoe div#mainnav ul li a.schoolsselected:visited {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.schools:hover,
+div.brandinguoe div#mainnav ul li a.schools:active {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.visiting {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.visitingselected:link,
+div.brandinguoe div#mainnav ul li a.visitingselected:visited {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.visiting:hover,
+div.brandinguoe div#mainnav ul li a.visiting:active {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li span.about {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.aboutsselected:link,
+div.brandinguoe div#mainnav ul li a.aboutselected:visited {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#mainnav ul li a.about:hover,
+div.brandinguoe div#mainnav ul li a.about:active {
+  background-color: #005dab;
+  color: #ffffff;
+  padding: 0 4px 1px;
+  text-decoration: none;
+}
+div.brandinguoe div#breadcrumb {
+  color: #999999;
+  font-size: 0.6em;
+  left: 0;
+  margin: 10px 0 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#breadcrumb a {
+  color: #999999;
+  font-weight: normal;
+}
+div.brandinguoe div#breadcrumb a:link,
+div.brandinguoe div#breadcrumb a:visited {
+  text-decoration: underline;
+}
+div.brandinguoe div#breadcrumb a:hover,
+div.brandinguoe div#breadcrumb a:active {
+  text-decoration: none;
+}
+div.brandinguoe div#leftnav {
+  float: left;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#leftnav ul {
+  color: #000000;
+  font-size: 0.7em;
+  line-height: 1.7em;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  width: 220px;
+}
+div.brandinguoe div#leftnav ul li {
+  display: block;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+  width: 220px;
+}
+div.brandinguoe div#leftnav ul li a:link,
+div.brandinguoe div#leftnav ul li a:visited {
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 208px;
+}
+div.brandinguoe div#leftnav ul li a:hover,
+div.brandinguoe div#leftnav ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 208px;
+}
+div.brandinguoe div#leftnav ul li span a:link,
+div.brandinguoe div#leftnav ul li span a:visited {
+  background-color: #ffffff;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 193px;
+}
+div.brandinguoe div#leftnav ul li span a:hover,
+div.brandinguoe div#leftnav ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#leftnav ul li ul {
+  background-color: #858585;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: 2px 0 2px 20px;
+  padding: 0;
+  width: 200px;
+}
+div.brandinguoe div#leftnav ul li ul li {
+  display: block;
+  line-height: 1.4em;
+  width: 200px;
+}
+div.brandinguoe div#leftnav ul li ul li a:link,
+div.brandinguoe div#leftnav ul li ul li a:visited {
+  border-color: #858585;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 188px;
+}
+div.brandinguoe div#leftnav ul li ul li a:hover,
+div.brandinguoe div#leftnav ul li ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 188px;
+}
+div.brandinguoe div#leftnav ul li ul li span a:link,
+div.brandinguoe div#leftnav ul li ul li span a:visited {
+  background-color: #858585;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 173px;
+}
+div.brandinguoe div#leftnav ul li ul li span a:hover,
+div.brandinguoe div#leftnav ul li ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#leftnav ul li ul li ul {
+  background-color: #a3a3a3;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: 2px 0 2px 20px;
+  padding: 0;
+  width: 180px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li {
+  display: block;
+  line-height: 1.4em;
+  width: 180px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li a:link,
+div.brandinguoe div#leftnav ul li ul li ul li a:visited {
+  border-color: #a3a3a3;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 168px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li ul li ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 168px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li span a:link,
+div.brandinguoe div#leftnav ul li ul li ul li span a:visited {
+  background-color: #a3a3a3;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 153px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li span a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul {
+  background-color: #c2c2c2;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: 2px 0 2px 20px;
+  padding: 0;
+  width: 160px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li {
+  display: block;
+  line-height: 1.4em;
+  width: 160px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li a:visited {
+  border-color: #c2c2c2;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 148px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 148px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li span a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li span a:visited {
+  background-color: #c2c2c2;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 133px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li span a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul {
+  background-color: #e0e0e0;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: 2px 0 2px 20px;
+  padding: 0;
+  width: 140px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li {
+  display: block;
+  line-height: 1.4em;
+  width: 140px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li a:visited {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 128px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 128px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li span a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li span a:visited {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 113px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li span a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul {
+  background-color: #efefef;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: 2px 0 2px 20px;
+  padding: 0;
+  width: 120px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li {
+  display: block;
+  line-height: 1.4em;
+  width: 120px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li a:visited {
+  border-color: #efefef;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 108px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li a:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li span {
+  background-color: #666666;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 108px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li span a:link,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li span a:visited {
+  background-color: #efefef;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/arrowglobal.gif");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: medium none;
+  margin-bottom: -2px;
+  margin-left: -5px;
+  margin-top: -2px;
+  padding-right: 20px;
+  width: 93px;
+}
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li span a:hover,
+div.brandinguoe div#leftnav ul li ul li ul li ul li ul li ul li span a:active {
+  background-color: #666666;
+}
+div.brandinguoe div#rightnav {
+  background-color: #b2b2b2;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 218px;
+}
+div.brandinguoe div#rightnav ul {
+  left: 0;
+  list-style: none outside none;
+  margin: 0 0 0 7px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 198px;
+}
+div.brandinguoe div#rightnav ul li {
+  font-weight: bold;
+  line-height: 1.8em;
+  width: 198px;
+}
+div.brandinguoe div#rightnav ul li a:link,
+div.brandinguoe div#rightnav ul li a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+div.brandinguoe div#rightnav ul li a:hover,
+div.brandinguoe div#rightnav ul li a:active {
+  color: #666666;
+  text-decoration: none;
+}
+div.brandinguoe div#rightnav ul li span {
+  color: #666666;
+}
+div.brandinguoe div#rightcolumn span.toplink {
+  background-color: #666666;
+}
+div.brandinguoe div#rightcolumn span.toplink a:link,
+div.brandinguoe div#rightcolumn span.toplink a:visited {
+  color: #ffffff;
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe div#rightcolumn span.toplink a:hover,
+div.brandinguoe div#rightcolumn span.toplink a:active {
+  color: #000000;
+  text-decoration: none;
+}
+div.brandinguoe div#rightcolumn span.bottomlink a:link,
+div.brandinguoe div#rightcolumn span.bottomlink a:visited {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: none;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe div#rightcolumn span.bottomlink a:hover,
+div.brandinguoe div#rightcolumn span.bottomlink a:active {
+  color: #000000;
+  text-decoration: none;
+}
+div.brandinguoe div#rightnavsubject {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 218px;
+}
+div.brandinguoe div#rightnavsubject h1 {
+  background-color: #666666;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif, Bitstream Vera Sans;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 4px 3px 7px 10px;
+  width: 205px;
+}
+div.brandinguoe div#rightnavsubject h1 img {
+  margin: 0 0 -2px;
+  padding: 0;
+}
+div.brandinguoe div#rightnavsubject ul {
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 198px;
+}
+div.brandinguoe div#rightnavsubject ul li {
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#rightnavsubject ul li a:link,
+div.brandinguoe div#rightnavsubject ul li a:visited {
+  color: #666666;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe div#rightnavsubject ul li a:hover,
+div.brandinguoe div#rightnavsubject ul li a:active {
+  background-color: #666666;
+  color: #ffffff;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe div#rightnavsubject ul li.bottom a:hover,
+div.brandinguoe div#rightnavsubject ul li.bottom a:active {
+  background-color: #666666;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottomdark.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe div#progHead ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#progHead ul li {
+  font-weight: bold;
+  line-height: 1.8em;
+  margin: 0;
+}
+div.brandinguoe div#progHead ul li a {
+  display: block;
+  padding: 4px 3px 7px 10px;
+  width: 205px;
+}
+div.brandinguoe div#progHead ul li a:link,
+div.brandinguoe div#progHead ul li a:visited {
+  text-decoration: none;
+}
+div.brandinguoe div#progHead ul li a:link,
+div.brandinguoe div#progHead ul li a:active {
+  text-decoration: none;
+}
+div.brandinguoe p.none {
+  display: none;
+}
+div.brandinguoe div#rightColSMButtons {
+  padding: 5px;
+}
+div.brandinguoe div#rightColSMButtons div {
+  display: inline-block;
+  margin: 15px 5px;
+}
+div.brandinguoe div#content {
+  left: 0;
+  margin: 10px 0 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#contentmain {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#contentmainnav {
+  left: 0;
+  margin: 0 0 0 240px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 697px;
+}
+div.brandinguoe div#bigtopimage {
+  left: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#backupbillboard {
+  left: 0;
+  margin: -400px 0 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+div.brandinguoe div#backupfeature {
+  left: 0;
+  margin: -290px 0 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+div.brandinguoe .textbox {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .textbox ul {
+  margin: 0 0 0 1px;
+  padding: 0 0 10px;
+}
+div.brandinguoe .textbox ul li {
+  padding-bottom: 5px;
+}
+div.brandinguoe .textbox ol {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin: 0 0 0 15px;
+  padding: 0 0 10px;
+}
+div.brandinguoe .textbox ul li ul {
+  list-style: disc outside none;
+}
+div.brandinguoe .textbox ol li ol {
+  font-size: 1em;
+  list-style-type: lower-alpha;
+}
+div.brandinguoe .textbox img {
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+div.brandinguoe div#rightcolumn {
+  float: right;
+  margin: 0 5px 0 20px;
+  padding: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+div.brandinguoe div#rightcolumn p {
+  color: #666666;
+  padding: 5px 5px 10px 10px;
+  width: 198px;
+}
+div.brandinguoe .staffdetails {
+  height: 115px;
+  padding-bottom: 10px;
+}
+div.brandinguoe .staffdetails p {
+  margin-left: 85px;
+}
+div.brandinguoe .staffdetails h4 {
+  margin-left: 85px;
+}
+div.brandinguoe .staffdetails img {
+  float: left;
+}
+div.brandinguoe .onecolimage {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: repeat-x;
+  margin-bottom: 10px;
+  width: 218px;
+}
+div.brandinguoe .onecolimage p {
+  color: #666666;
+  padding: 5px 5px 10px 10px;
+  width: 203px;
+}
+div.brandinguoe .twocolimage {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottomtwocol.gif");
+  background-position: right bottom;
+  background-repeat: repeat-x;
+  color: #666666;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 5px 5px 10px 10px;
+  width: 410px;
+}
+div.brandinguoe .twocolimage img {
+  margin: -5px -5px 5px -10px;
+}
+div.brandinguoe .twocolimage p {
+  font-size: 1em;
+  padding: 0 !important;
+}
+div.brandinguoe .threecolimage {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottomthreecol.gif");
+  background-position: right bottom;
+  background-repeat: repeat-x;
+  color: #666666;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 5px 5px 10px 10px;
+  width: 677px;
+}
+div.brandinguoe .threecolimage img {
+  margin: -5px -5px 5px -10px;
+}
+div.brandinguoe .threecolimage p {
+  font-size: 1em;
+  padding: 0 !important;
+}
+div.brandinguoe div#mappage {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#mappage p {
+  font-size: 0.7em;
+}
+div.brandinguoe div#key {
+  height: 850px;
+  left: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#key table {
+  font-size: 0.7em;
+  line-height: 1em;
+  padding-bottom: 10px;
+}
+div.brandinguoe div#key th {
+  background-color: #666666;
+  color: #ffffff;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe div#key td {
+  background-color: #e0e0e0;
+  color: #000000;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe div#key img {
+  padding: 0;
+}
+div.brandinguoe div#panel {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 952px;
+}
+div.brandinguoe div#panel2 {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 715px;
+}
+div.brandinguoe div#splitter {
+  float: left;
+  height: 1px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 700px;
+}
+div.brandinguoe .box {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottom.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  float: left;
+  left: 0;
+  margin: 0 20px 20px 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 218px;
+}
+div.brandinguoe .box p {
+  padding: 3px 3px 3px 10px;
+}
+div.brandinguoe .box h1 {
+  background-color: #666666;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxtop.gif");
+  background-position: left top;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 5px 5px 10px;
+}
+div.brandinguoe .box h1 a {
+  color: #ffffff;
+}
+div.brandinguoe .box h1 a:link,
+div.brandinguoe .box h1 a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+div.brandinguoe .box h1 a:hover,
+div.brandinguoe .box h1 a:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+div.brandinguoe .plus {
+  color: #ffffff;
+  float: left;
+  font-size: 1.3em;
+  padding: 0 5px 0 10px;
+}
+div.brandinguoe .box ul {
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 218px;
+}
+div.brandinguoe .box ul li {
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe .box ul li a:link,
+div.brandinguoe .box ul li a:visited {
+  color: #666666;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe .box ul li a:hover,
+div.brandinguoe .box ul li a:active {
+  background-color: #666666;
+  color: #ffffff;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe .box ul li.bottom a:hover,
+div.brandinguoe .box ul li.bottom a:active {
+  background-color: #666666;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/boxbottomdark.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: block;
+  padding: 4px 3px 7px 10px;
+  text-decoration: none;
+  width: 205px;
+}
+div.brandinguoe ul#twitter_update_list {
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 3px 3px 3px 10px;
+  position: relative;
+  top: 0;
+  width: 205px;
+}
+div.brandinguoe ul#twitter_update_list li {
+  color: #666666;
+  font-weight: normal;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe ul#twitter_update_list li a:link,
+div.brandinguoe ul#twitter_update_list li a:visited {
+  color: #666666;
+  padding: 0 0 5px;
+  text-decoration: none;
+}
+div.brandinguoe ul#twitter_update_list li a:hover,
+div.brandinguoe ul#twitter_update_list li a:active {
+  background: none repeat scroll 0 0 rgba(0,0,0,0);
+  color: #666666;
+  text-decoration: underline;
+}
+div.brandinguoe div#news1 {
+  left: 0;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+div.brandinguoe div#news2 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+}
+div.brandinguoe div#news3 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 3;
+}
+div.brandinguoe div#multiImg1 {
+  left: 0;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+div.brandinguoe div#multiImg2 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+}
+div.brandinguoe div#multiImg3 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 3;
+}
+div.brandinguoe div#multiImg4 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 4;
+}
+div.brandinguoe div#multiImg5 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 5;
+}
+div.brandinguoe div#multiImg6 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+div.brandinguoe div#multiImg7 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+div.brandinguoe div#multiImg8 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+div.brandinguoe div#multiImg9 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+div.brandinguoe div#multiImg10 {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+div.brandinguoe .latest {
+  width: 450px;
+}
+div.brandinguoe .latest h2 {
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: 0 0 0 70px;
+  padding: 0;
+}
+div.brandinguoe .latest p {
+  font-size: 0.7em;
+  line-height: 1.3em;
+  margin: 0 0 0 70px;
+  padding: 0;
+}
+div.brandinguoe .latest a {
+  color: #666666;
+}
+div.brandinguoe .latest img {
+  float: left;
+}
+div.brandinguoe .article {
+  height: 60px;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+div.brandinguoe .big {
+  width: 456px;
+}
+div.brandinguoe .big img {
+  float: left;
+}
+div.brandinguoe .big p {
+  margin-left: 218px;
+}
+div.brandinguoe .big ul {
+  margin-left: 218px;
+  width: 238px;
+}
+div.brandinguoe .big ul li a:link,
+div.brandinguoe .big ul li a:visited {
+  width: 225px;
+}
+div.brandinguoe .big ul li a:hover,
+div.brandinguoe .big ul li a:active {
+  width: 225px;
+}
+div.brandinguoe .big ul li.bottom a:hover,
+div.brandinguoe .big ul li.bottom a:active {
+  width: 225px;
+}
+div.brandinguoe .list {
+  width: 327px;
+}
+div.brandinguoe .list ul {
+  font-size: 0.7em;
+  width: 327px;
+}
+div.brandinguoe .list ul li a:link,
+div.brandinguoe .list ul li a:visited {
+  font-weight: normal;
+  width: 314px;
+}
+div.brandinguoe .list ul li a:hover,
+div.brandinguoe .list ul li a:active {
+  font-weight: normal;
+  width: 314px;
+}
+div.brandinguoe .list ul li.bottom a:hover,
+div.brandinguoe .list ul li.bottom a:active {
+  width: 314px;
+}
+div.brandinguoe .list2 {
+  width: 450px;
+}
+div.brandinguoe .list2 ul {
+  font-size: 0.7em;
+  width: 450px;
+}
+div.brandinguoe .list2 ul li a:link,
+div.brandinguoe .list2 ul li a:visited {
+  font-weight: normal;
+  width: 437px;
+}
+div.brandinguoe .list2 ul li a:hover,
+div.brandinguoe .list2 ul li a:active {
+  font-weight: normal;
+  width: 437px;
+}
+div.brandinguoe .list2 ul li.bottom a:hover,
+div.brandinguoe .list2 ul li.bottom a:active {
+  width: 437px;
+}
+div.brandinguoe div#boxplain {
+  background-color: #e0e0e0;
+  color: #666666;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 10px;
+  position: relative;
+  top: 0;
+  width: 672px;
+}
+div.brandinguoe div#boxwide {
+  left: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 672px;
+}
+div.brandinguoe div#boxplainnarrow {
+  background-color: #e0e0e0;
+  color: #666666;
+  float: left;
+  left: 0;
+  margin: 0 20px 20px 0;
+  padding: 10px;
+  position: relative;
+  top: 0;
+  width: 436px;
+}
+div.brandinguoe div#boxplainnarrow h2 {
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px 0;
+}
+div.brandinguoe div#boxplainnarrow p {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 5px 0;
+}
+div.brandinguoe div#boxplainnarrow a {
+  color: #666666;
+}
+div.brandinguoe div#boxplainnarrow img {
+  float: left;
+  padding: 5px 10px 0 0;
+}
+div.brandinguoe .box ul.bullets {
+  list-style: disc outside none;
+  margin-left: 25px;
+  width: 190px;
+}
+div.brandinguoe .box ul.bullets li {
+  color: #666666;
+  padding: 2px 3px 2px 0;
+}
+div.brandinguoe .boxblank {
+  float: left;
+  left: 0;
+  margin: 0 2% 20px 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 218px;
+}
+div.brandinguoe div#splashtop {
+  background-color: #e0e0e0;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 692px;
+}
+div.brandinguoe div#splashheading {
+  background-color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 692px;
+}
+div.brandinguoe div#splashheading h1 {
+  color: #ffffff;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 5px 0 6px 20px;
+}
+div.brandinguoe div#splashbody {
+  background-color: #e0e0e0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 692px;
+}
+div.brandinguoe div#splashbody .introtext {
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-left: 470px;
+  margin-top: -295px;
+  min-height: 295px;
+  width: 200px;
+}
+div.brandinguoe div#splashbody .introtext ul {
+  font-size: 0.9em;
+}
+div.brandinguoe div#splashbody .introtext a {
+  font-weight: normal;
+}
+div.brandinguoe div#link {
+  background-color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  top: 0;
+  width: 446px;
+}
+div.brandinguoe div#link h2 {
+  color: #ffffff;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#link h2 a {
+  color: #ffffff;
+}
+div.brandinguoe div#link h2 a:link,
+div.brandinguoe div#link h1 a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+div.brandinguoe div#link h2 a:hover,
+div.brandinguoe div#link h1 a:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+div.brandinguoe div#link a {
+  font-weight: bold;
+  text-decoration: none;
+}
+div.brandinguoe div#link .plus {
+  color: #ffffff;
+  margin-top: -3px;
+  padding: 0 5px 0 10px;
+}
+div.brandinguoe div#newstop {
+  background-color: #e0e0e0;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 692px;
+}
+div.brandinguoe div#newsheading {
+  background-color: #005dab;
+  height: 40px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 692px;
+}
+div.brandinguoe div#newsheading h1 {
+  color: #ffffff;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 5px 0 0 20px;
+}
+div.brandinguoe div#newsleft {
+  background-color: #e0e0e0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 456px;
+}
+div.brandinguoe div#link {
+  background-color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  top: 0;
+  width: 446px;
+}
+div.brandinguoe div#link h2 {
+  color: #ffffff;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#link h2 a {
+  color: #ffffff;
+}
+div.brandinguoe div#link h2 a:link,
+div.brandinguoe div#link h1 a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+div.brandinguoe div#link h2 a:hover,
+div.brandinguoe div#link h1 a:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+div.brandinguoe div#link a {
+  font-weight: bold;
+  text-decoration: none;
+}
+div.brandinguoe div#newsright {
+  background-color: #e0e0e0;
+  left: 456px;
+  margin: 0;
+  padding: 15px 15px 5px;
+  position: absolute;
+  top: 40px;
+  width: 196px;
+}
+div.brandinguoe div#newsright .introtext {
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+div.brandinguoe .quote {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/global_quote_left.gif");
+  background-position: left top;
+  background-repeat: no-repeat;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 20px 0 0 20px;
+  position: relative;
+  top: 0;
+  width: 672px;
+}
+div.brandinguoe .quote_inner {
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/global_quote_right.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 0 20px 20px 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .quote_inner img {
+  float: right;
+  left: 0;
+  margin: 0;
+  padding: 0 0 10px 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .quotenarrow {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/global_quote_left.gif");
+  background-position: left top;
+  background-repeat: no-repeat;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 20px 0 0 20px;
+  position: relative;
+  top: 0;
+  width: 436px;
+}
+div.brandinguoe .quotenarrow_inner {
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/global_quote_right.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #666666;
+  left: 0;
+  margin: 0;
+  padding: 0 20px 20px 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .quotenarrow_inner img {
+  float: right;
+  left: 0;
+  margin: 0;
+  padding: 0 0 10px 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .profile {
+  border: 1px solid #666666;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 20px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .profile img {
+  float: right;
+  left: 0;
+  margin: 0;
+  padding: 0 0 10px 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .profilenarrow {
+  border: 1px solid #666666;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  width: 436px;
+}
+div.brandinguoe .profilenarrow img {
+  float: right;
+  left: 0;
+  margin: 0;
+  padding: 0 0 10px 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .highlight {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/bottombar.gif");
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  color: #666666;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 10px 10px 15px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe .highlightnarrow {
+  background-color: #e0e0e0;
+  background-image: url("https://www.exeter.ac.uk/media/universityofexeter/webteam/styleassets/images/bottombar.gif");
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  color: #666666;
+  left: 0;
+  margin: 0 0 20px;
+  padding: 10px 10px 15px;
+  position: relative;
+  top: 0;
+  width: 436px;
+}
+div.brandinguoe div#question_box {
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#question_box ul {
+  font-size: 0.9em;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#question_box li {
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#question_box textarea {
+  color: #666666;
+  margin-bottom: 5px;
+  width: 97%;
+}
+div.brandinguoe div#question_box input {
+  color: #666666;
+  margin-bottom: 5px;
+  width: 97%;
+}
+div.brandinguoe div#question_box input.button {
+  color: #ffffff;
+  font-size: 0.98em;
+  margin: 0;
+  padding: 0 0 2px;
+  width: 80%;
+}
+div.brandinguoe div#question_box h3 {
+  font-size: 0.9em;
+}
+div.brandinguoe div#question_box p {
+  font-size: 0.9em;
+  margin-left: -10px;
+}
+div.brandinguoe label {
+  font-size: 0.7em;
+  left: 0;
+  padding-left: 10px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#panel input {
+  background-color: #ffffff;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.6em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 2px;
+}
+div.brandinguoe div#panel input.login {
+  background-color: #666666;
+  border: medium none;
+  color: #ffffff;
+  font-size: 0.6em;
+  margin-left: 10px;
+  padding: 2px;
+}
+div.brandinguoe div#panel2 input {
+  background-color: #ffffff;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.6em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 2px;
+}
+div.brandinguoe div#panel2 input.login {
+  background-color: #666666;
+  border: medium none;
+  color: #ffffff;
+  font-size: 0.6em;
+  margin-left: 10px;
+  padding: 2px;
+}
+div.brandinguoe div#textbox label {
+  font-size: 0.7em;
+  left: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#textbox input {
+  background-color: #ffffff;
+  border-color: #005dab;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.6em;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding: 2px;
+}
+div.brandinguoe div#textbox input.login {
+  background-color: #005dab;
+  border: medium none;
+  color: #ffffff;
+  font-size: 0.6em;
+  margin-left: 0;
+  padding: 2px;
+}
+div.brandinguoe form#phoneform {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe form#phoneform table {
+  font-size: 0.8em;
+  line-height: 1em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+div.brandinguoe form#phoneform td {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe form#phoneform .search-criteria {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 0;
+}
+div.brandinguoe form#phoneform .search-location {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 0;
+}
+div.brandinguoe form#phoneform .search-term {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 2px 3px;
+}
+div.brandinguoe form#phoneform option {
+  padding: 2px 3px;
+}
+div.brandinguoe form#phoneform .button {
+  font-size: 0.9em;
+}
+div.brandinguoe form#emailform {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe form#emailform table {
+  font-size: 0.8em;
+  line-height: 1em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+div.brandinguoe form#emailform td {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+}
+div.brandinguoe form#emailform .search-criteria {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 0;
+}
+div.brandinguoe form#emailform .search-location {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 0;
+}
+div.brandinguoe form#emailform .search-term {
+  border: 1px solid #666666 !important;
+  font-size: 0.9em;
+  padding: 2px 3px;
+}
+div.brandinguoe form#emailform option {
+  padding: 2px 3px;
+}
+div.brandinguoe form#emailform .button {
+  font-size: 0.9em;
+}
+div.brandinguoe div#footer {
+  border-top: 1px solid #666666;
+  left: 0;
+  margin: 20px 20px 0 0;
+  position: relative;
+  top: 0;
+  width: 932px;
+}
+div.brandinguoe div#footer a {
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+div.brandinguoe div#footer a:link,
+div.brandinguoe div#footer a:visited {
+  text-decoration: none;
+}
+div.brandinguoe div#footer a:hover,
+div.brandinguoe div#footer a:active {
+  text-decoration: underline;
+}
+div.brandinguoe div#footer p {
+  color: #666666;
+  font-size: 0.6em;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 10px 0;
+}
+div.brandinguoe div#footerleft {
+  left: 0;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#footerright {
+  float: right;
+  left: 0;
+  margin-right: 0;
+  margin-top: -37px;
+  position: relative;
+  top: 0;
+}
+div.brandinguoe div#footer img {
+  padding: 0 3px 0 10px;
+}
+div.brandinguoe .underline_top {
+  border-top: 1px solid black;
+}
+div.brandinguoe .underline_bottom {
+  border-bottom: 1px solid black;
+}
+div.brandinguoe .underline_top_and_bottom {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+div.brandinguoe .right_black_line {
+  border-right: 1px solid black;
+}
+div.brandinguoe .underline_double_bottom {
+  border-bottom: 3px double black;
+}
+div.brandinguoe .but {
+  background: -moz-linear-gradient(center top,#4790c8 0%,#2c73af) repeat scroll 0 0 rgba(0,0,0,0);
+  border: 1px solid #2c73af;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 5px 0 -20px;
+  min-width: 80px;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+  width: 196px;
+}
+div.brandinguoe .but:hover {
+  background: -moz-linear-gradient(center top,#2c73af 0%,#4790c8) repeat scroll 0 0 rgba(0,0,0,0);
+  color: #fff;
+  min-width: 78px;
+  padding: 10px;
+}
+div.brandinguoe a.but:link,
+div.brandinguoe a.but:visited,
+div.brandinguoe a.but:hover,
+div.brandinguoe a.but {
+  color: #fff;
+  text-decoration: none;
+}
+div.brandinguoe .case-study-teaser {
+  float: left;
+  margin: 20px 5px 0;
+  min-height: 155px;
+  width: 337px;
+}
+div.brandinguoe .case-study-teaser img {
+  border: 0 none !important;
+  float: left;
+  height: 100px !important;
+  margin: 0 10px 10px 0;
+  width: 100px !important;
+}
+div.brandinguoe .case-study-teaser div {
+  float: left;
+  width: 227px;
+}
+div.brandinguoe .case-study-teaser-video {
+  float: left;
+  margin: 20px 5px 0;
+  min-height: 310px;
+  width: 337px;
+}
+div.brandinguoe .case-study-teaser-video iframe {
+  margin-bottom: 10px;
+}
+div.brandinguoe #subject_kspinner li {
+  margin-top: 5px;
+}
+
+/* our styles */
+body.brandinguoe.layout .navbar.navbar-fixed-top {
+  position: relative;
+}
+body.brandinguoe.layout> #main {
+  margin-top: 0px;
+}
+body.brandinguoe.layout> #main #content-wrap {
+  margin-top: 0px;
+}
+body.brandinguoe.layout .navbar.navbar-fixed-top.affix {
+  position: fixed;
+  top: 0px;
+}
+body.brandinguoe.layout #content-wrap > ul.nav-tabs {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+body.brandinguoe {
+  background-color: #ffffff;
+}
+body.brandinguoe div.main {
+  margin-top: 0px;
+  background-color: #fff;
+}
+body.brandinguoe div.main #content-wrap {
+  border-left: none;
+  border-right: none;
+}
+div.brandinguoe {
+  /* style overrides */
+  font-family: Arial, Helvetica, sans-serif, Bitstream Vera Sans;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+div.brandinguoe.footer {
+  border-top: 1px solid #ccc;
+}
+div.brandinguoe.header {
+  border-bottom: 1px solid #ccc;
+}
+div.brandinguoe .button {
+  line-height: auto;
+}
+div.brandinguoe input {
+  border-radius: 0px;
+  color: #555;
+  display: inline-block;
+  font-size: 16px;
+  height: auto;
+  line-height: auto;
+  margin-bottom: 0px;
+  padding: 0px;
+  vertical-align: middle;
+}
+div.brandinguoe div#search,
+div.brandinguoe div#supernav {
+  margin-right: 10px !important;
+}
+div.brandinguoe div#footer {
+  width: auto !important;
+  margin-right: 0px !important;
+  border-top: 0px !important;
+}

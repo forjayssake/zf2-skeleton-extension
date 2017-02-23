@@ -1,0 +1,260 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.form-horizontal .form-group {
+	margin-left: 0px;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.global-help {
+	cursor: pointer;
+}
+
+ul.nav-tabs {
+	margin-bottom: 20px;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+
+.login-wrapper {
+	padding: 35px;
+	margin: auto;
+	margin-top: 25px;
+	width: 45%;
+	min-width: 250px;
+}
+
+.text-centre {
+	text-align: center;
+}
+
+#page-loader {
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   padding-top: 50px;
+   display: block;
+   opacity: 0.7;
+   background-color: #FFFFFF;
+   text-align: center;
+   min-height: 250px;'
+}
+
+.list-total {
+	color: #999;
+}
+
+/** propel tables */
+
+.propel-table-header {
+	background-color: #FFFAF0;
+}
+
+th.propel-table-actions-header {
+	text-align: right !important;
+}
+td.propel-table-actions {
+	text-align: right !important;
+}
+
+.single-location-sml {
+	height: 250px;
+	width: 400px;
+	float: left;
+	margin-right: 25px;
+}
+
+.single-location-med {
+	height: 350px;
+	width: 500px;
+	float: left;
+	margin-right: 25px;
+}
+
+.locations-map {
+	border-radius: 5px;
+}
+
+.dl-horizontal dt {
+	text-align: left !important;
+}
+
+.btn-fixed-width-med {
+	width: 150px;
+	text-align: left;
+}
+
+.form-horizontal input, .form-horizontal select, .form-horizontal textarea {
+	width: 40%;	
+	min-width: 200px;
+}
+
+/** override for bootstrap-datepicker append/prepend */
+.input-group {
+	width: 40%;	
+	min-width: 200px;
+}
+
+.form-horizontal input[type="checkbox"] {
+	width: auto;
+	min-width: 0;
+}
+
+.form-horizontal textarea {
+	width: 40%;
+	height: 125px;
+	min-width: 400px;	
+}
+
+.login-wrapper input {
+	width: 100%;
+}
+
+.alert {
+	padding: 7px 15px !important;
+}
+
+.description-wrapper {
+	max-height: 150px;
+	overflow-y: scroll;
+}
+
+ul.clean-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+div.generic-modal-waiting {
+    color: #615e3f;
+    font-size: 4em;
+    min-height: 120%;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 20px 20px 0;
+}
+
+img#homeLinkImage {
+	position: relative;
+	top: -2px;
+}
+
+p.help-block {
+	max-width: 500px;
+}
+
+input.required, select.required {
+	 background-color: #fff7c0;
+}
+
+.globalSearchResultsWrapper {
+	display: none;
+	max-height: 450px;
+	overflow-y: scroll;
+}
+
+.gs-highlight {
+	background-color: #FFFF7E;
+}
+
+.global-search-no-results {
+	display: none;
+	text-align: center;
+}
+
+span.bold {
+	font-weight: bold;'
+}
+
+div.gs-total-rows {
+	margin-bottom: 10px;
+}
+
+.globalsearchpleasewaitmodal_dialog {
+	width: 60%;
+}
+
+.gs-search-error {
+	display: none;
+}
+
+p.list-item-content {
+    line-height: 15px;
+    padding: 3px 0px !important;
+    margin: 3px 15px !important;
+    color: #777 !important;
+    margin-bottom: 0px;
+    margin-left: 20px !important;
+}
+
+p.list-item-badged {
+	margin-bottom: 5px;
+}
+
+span.icon-wrapper {
+	font-size: 16px !important;
+	padding: 3px;
+}
+
+div.alert-col-left {
+	position: relative;
+	left: -17px;
+}
+
+dl.dl-narrow dd {
+	width: 125px;
+}
+
+.view-subheader {
+	margin-left: -15px;
+}
+
+#zero-parameters-warning {
+	display: none;
+}
+
+div.template-text-wrapper {
+	max-height: 250px;
+	overflow-y: scroll;
+}
+
+div.access-form-section-title {
+	border-bottom: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #eee;
+	padding: 7px 0 5px 10px;
+}
+
+div.access-form-section-title h4 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
