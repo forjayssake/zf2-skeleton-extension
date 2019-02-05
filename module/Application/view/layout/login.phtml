@@ -29,7 +29,7 @@
 
     </head>
     <body class="brandinguoe layout ">
-    	<?php echo $this->partial('partial/uoe/header-botanical');?>
+    	<?php echo $this->partial('partial/base/header');?>
         <div class="container">
         
             <?php echo $this->ShowFlashMessages('error',   $this->flashErrorMessages);?>
@@ -43,7 +43,7 @@
             
         </div>
         <hr>
-        <?php echo $this->partial('partial/uoe/footer');?>
+        <?php echo $this->partial('partial/base/footer');?>
         <?php echo $this->inlineScript() ?>
     </body>
 </html>
