@@ -226,11 +226,9 @@ return array(
         	'partial/navigation/uoe-navigation-logout' => __DIR__ . '/../view/partial/navigation/uoe-navigation-logout.phtml',
         	'partial/navigation/uoe-navigation-setup'  => __DIR__ . '/../view/partial/navigation/uoe-navigation-setup.phtml',
         	
-        	'partial/uoe/header'    => __DIR__ . '/../view/partial/uoe/uoe-header.phtml',
-        	'partial/uoe/header-botanical'    => __DIR__ . '/../view/partial/uoe/uoe-header-botanical.phtml',
-        	'partial/uoe/footer'    => __DIR__ . '/../view/partial/uoe/uoe-footer.phtml',
-        	'partial/uoe/public-footer'    => __DIR__ . '/../view/partial/uoe/uoe-footer-public.phtml',
-        	
+        	'partial/base/header'    => __DIR__ . '/../view/partial/base/header.phtml',
+        	'partial/base/footer'    => __DIR__ . '/../view/partial/base/footer.phtml',
+
         	'partial/table'			=> __DIR__ . '/../view/partial/table/table.phtml',
         	'partial/table-header'	=> __DIR__ . '/../view/partial/table/table-header.phtml',
         	'partial/table-pagination'	=> __DIR__ . '/../view/partial/table/table-pagination.phtml',
