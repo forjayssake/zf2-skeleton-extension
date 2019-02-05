@@ -35,13 +35,11 @@ This application uses v4.6.3
 
 Requirements & Setup
 --------------------
-Install PHP ~5.5 - either install manually (http://php.net/manual/en/install.php), or (easier) install via an AMP server, e.g. XAMPP (https://www.apachefriends.org/download.html)
+Install PHP ~5.5 - either install manually (http://php.net/manual/en/install.php), or (easier) install via an AMP server, e.g. XAMPP (https://www.apachefriends.org/download.html) - Current code is tested and working with PHP 7.1
 
 Install Composer - download here: https://getcomposer.org/download/, documentation here: https://getcomposer.org/doc/ 
 
 Pull down this repository via Git, or extract into your local working directory   
-
-Current code has been tested with PHP 7.1
 
 Populate Your Vendor Directory
 ------------------------------
