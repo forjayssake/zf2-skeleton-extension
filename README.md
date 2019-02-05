@@ -46,7 +46,7 @@ Current code has been tested with PHP 7.1
 Populate Your Vendor Directory
 ------------------------------
 Open the command prompt as an administrator and change directory (cd) to your local working directory.   
-Type "composer update" and press enter
+Type "composer install" and press enter
 
 The configuration for what Composer installs for the application is stored in \composer.json. Update this file to add new packages.
 
