@@ -53,6 +53,9 @@ The configuration for what Composer installs for the application is stored in \c
 
 Initialising Propel ORM
 -----------------------
+
+NOTE: AS this is an example application all model classes have been included. You only need to run the framework-base.sql file in a MySQL database of the same name. The propel.php file in the root of the project contains references to the username, password and host for this database.
+
 Before the skeleton application can run correctly a database must be set up. The repository contains the generated Propel
 classes for the example database, and a framework-base.sql file containing SQL to generate the database and populate it with the minimum details for you
 to log into the application.
