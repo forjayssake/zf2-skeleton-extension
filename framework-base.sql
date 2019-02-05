@@ -3,6 +3,19 @@
 # It "suspends judgement" for fkey relationships until are tables are set.
 SET FOREIGN_KEY_CHECKS = 0;
 
+DROP TABLE IF EXISTS `accessmanagementlogs`;
+
+CREATE TABLE `accessmanagementlogs`
+(
+   `id` INTEGER NOT NULL AUTO_INCREMENT,
+   `_user_id` INTEGER NOT NULL,
+   `config` TEXT(10) NOT NULL,
+	`created_at` DATETIME,
+    `updated_at` DATETIME,
+    PRIMARY KEY (`id`),
+    INDEX `users_fi_6f6176` (`_user_id`)
+) ENGINE=InnoDB CHARACTER SET='utf8' COLLATE='utf8_general_ci';
+
 -- ---------------------------------------------------------------------
 -- users
 -- ---------------------------------------------------------------------
