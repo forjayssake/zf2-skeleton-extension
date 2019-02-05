@@ -41,6 +41,7 @@ Install Composer - download here: https://getcomposer.org/download/, documentati
 
 Pull down this repository via Git, or extract into your local working directory   
 
+Current code has been tested with PHP 7.1
 
 Populate Your Vendor Directory
 ------------------------------
