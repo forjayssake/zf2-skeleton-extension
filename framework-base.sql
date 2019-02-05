@@ -34,6 +34,7 @@ CREATE TABLE `users`
     `username` VARCHAR(255) NOT NULL,
     `authenticationType` TINYINT(1) DEFAULT 0 NOT NULL,
     `systemAdministrator` TINYINT(1) DEFAULT 0 NOT NULL,
+    `userData` TEXT,
     `created_at` DATETIME,
     `updated_at` DATETIME,
     PRIMARY KEY (`id`),
